@@ -11,6 +11,7 @@
   gap: 15px;
   padding-bottom: 30px;
   border-bottom: 0.5px solid #ccc;
+  position: relative;
 }
 
 #main > .container > .title > h2 {
@@ -203,19 +204,83 @@
   height: 240px;
   padding: 20px 0;
   flex-wrap: no-wrap;
-  outline: 1px solid red;
   gap: 20px;
 }
 .result-container > .right-result > .result-wrapper > .result-card > img {
   width: 305px;
   height: 205px;
   border-radius: 16px;
+  display: block;
 }
+
+/*하트 공유버튼*/
 .result-container > .right-result > .result-wrapper > .result-card > div > .star {
   display: flex;
+  align-items: flex-start;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .star > p {
+  font-size: 13px;
+  color: #f2b124;
+  border: 1px solid #f2b124;
+  border-radius: 5px;
+  padding: 3px 5px;
+  margin-bottom: 6px;
 }
 .result-container > .right-result > .result-wrapper > .result-card >  div > .star > img {
-  display: block;
+  display: flex;
   width: 17px;
   height: 15px;
 }
+
+.result-container > .right-result > .result-wrapper > .result-card >  div > .star > img:nth-of-type(1){
+  margin-left: 420px;
+  margin-right: 16px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > h2{
+font-size: 20px;
+font-weight: 600;
+color: #333;
+margin-bottom: 6px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+  padding-bottom: 25px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map > p {
+  color: #0283DF;
+  display: flex;
+  
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map > p img{
+  width: 17px;
+  height: 21px;
+  margin-right: 6px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map > .price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map > .price > h2{
+  font-weight: normal;
+  font-size: 20px;
+  color: #333;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map > .price > h2 > span{
+  font-weight: 700;
+  font-size: 20px;
+  color: #333;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > .map > .price h5{
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
