@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>검색페이지</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <!--탑버튼-->
+  <div class="top-btn">
+    <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
+  </div>
+
+  <!-- header -->
+  <div class="notice" id="top-btn">
+    <article class="top">
+      <p>공지사항</p>
+    </article>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="search-container">
+        <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+        <input type="text" placeholder="검색어를 입력해주세요.">
+        <ul>
+          <li><a href="#"><img src="images/mynaui_bell.svg" alt="알림">알림</a></li>
+          <li><a href="#"><img src="images/mypage.svg" alt="마이페이지">마이페이지</a></li>
+          <li><a href="#"><img src="images/lucide_calendar.svg" alt="예약내역">예약내역</a></li>
+          <li><a href="#" onclick="popup()"><img src="images/login_.svg" alt="로그인">로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="gnb">
+        <div class="left-tab">
+          <ul>
+            <li class="menu"><img onclick="toggleMenu()" src="images/menu.svg" alt="menu">
+              <div class="mega">
+                <div class="sub">
+                  <h2>크루즈</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">아시아</a></li>
+                    <li><a href="#">유럽</a></li>
+                    <li><a href="#">미주</a></li>
+                    <li><a href="#">대양주</a></li>
+                  </ul>
+                </div>
+                <div class="sub">
+                  <h2>차량 / 골프 서비스</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">공항이동 서비스</a></li>
+                    <li><a href="#">골프 서비스</a></li>
+                    <li><a href="#">렌트카 서비스</a></li>
+                  </ul>
+                </div>
+                <div class="sub">
+                  <h2>아고다 마일리지</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">마일리지 샵</a></li>
+                    <li><a href="#">아고다 멤버스</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">해외여행</a></li>
+            <li><a href="#">국내여행</a></li>
+            <li><a href="#">항공</a></li>
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">항공+호텔</a></li>
+            <li><a href="#">투어패스</a></li>
+            <li><a href="#">공항이동서비스</a></li>
+          </ul>
+        </div>
+
+        <!-- right-tab을 하나의 div로 묶어서 오른쪽에 배치 -->
+        <div class="right-tab">
+          <ul>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 검색창 시작 -->
+  <main id="main">
+    <div class="container">
+
+      <div class="title">
+        <h2>검색결과</h2>
+      </div>
+      <section class="top-result">
+        <div class="date-box">
+          <div class="area">
+            <p>미국</p>
+            <span>&#9660;</span>
+          </div>
+          <div class="date">
+            <p>2025.03.04 ~ 2025.03.05</p>
+            <img src="images/calendar.png" alt="달력">
+          </div>
+        </div>
+        <div class="people-box">
+          <img src="images/user.png" alt="인원">
+          <p>성인2,객실1</p>
+        </div>
+      </section>
+
+      <section class="result-container">
+        <div class="left-result">
+          <h2>검색결과 <span>1653</span></h2>
+
+          <div class="filter">
+            <h3>필터<img src="images/searchFilter.png" alt="필터아이콘"></h3>
+            <div>
+              <p>필터 전체 초기화</p>
+              <img src="images/reset.png" alt="초기화아이콘">
+            </div>
+          </div>
+
+          <div class="research-box">
+            <h2>결과 내 호텔 재검색</h2>
+            <p><input type="text">&#10133;</p>
+          </div>
+
+          <p>&bull;영문으로 검색하시면 더 정확한 결과를 확인하실 수 있습니다.</p>
+
+          <ul>
+            <li>숙소종류</li>
+            <li>지역</li>
+            <li>이용가능서비스</li>
+            <li>결제관련옵션</li>
+            <li>숙소편의시설 및 서비스</li>
+            <li>투숙객 평가지수</li>
+            <li>침대종류</li>
+          </ul>
+        </div>
+
+        <!-- 오른쪽 컨텐츠 -->
+        <section class="right-result">
+          <div class="align">
+            <img src="images/filter.png" alt="정렬">
+            <p>추천순</p>
+          </div>
+
+          <div class="result-wrapper">
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div>
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </div>
+            </article>
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </article>
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </article>
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </article>
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </article>
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </article>
+            <article class="result-card">
+              <img src="images/hotel1.png" alt="hotel">
+              <div class="star">
+                <p>5성급</p>
+                <img src="images/heart.png" alt="하트">
+                <img src="images/shere.png" alt="하트">
+              </div>
+              <div class="txt">
+                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                <span>Sheraton New York Times Square Hotel</span>
+                <span>브로드웨이 부근에 위치</span>
+                <div class="map">
+                  <img src="images/map-pin.svg" alt="">
+                  <p>지도로보기</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+  <div id="footer">
+    <article class="wrap">
+      <section>
+        <ul>
+          <li><a href=#>도움말 문의</a></li>
+          <li><a href=#>회사정보</a></li>
+          <li><a href=#>여행지 국가별 정보</a></li>
+          <li><a href=#>파트너스</a></li>
+          <li><a href=#>모바일</a></li>
+        </ul>
+        <div class="txt">
+          <p>All material herein © 2005 – 2025 Agoda Company Pte. Ltd., All Rights Reserved.</p>
+          <br>
+          <p>아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의 일부입니다.</p>
+        </div>
+        <div class="pic">
+          <img src="images/foot1.png" alt="">
+          <img src="images/foot2.png" alt="">
+          <img src="images/foot3.png" alt="">
+          <img src="images/booking4.png" alt="">
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    /*메인페이지로 이동*/
+    document.querySelector(".logo").addEventListener("click", function () {
+      window.location.href = "index.html";
+    })
+
+    /*top-btn*/
+    const topBtn = document.querySelector(".top-btn");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+        topBtn.style.opacity = "1";
+      } else {
+        topBtn.style.opacity = "0"
+        // topBtn.style.display = "none";
+      }
+    })
+
+    /* 전체메뉴*/
+    const mega = document.querySelector(".mega");
+    const menuBtn = document.querySelector(".menu");
+
+    function toggleMenu() {
+      mega.classList.toggle("open");
+    }
+
+    window.addEventListener("click", (e) => {
+      const isClickInside = mega.contains(e.target);//메뉴 내부 클릭 여부
+      const isClickMenuBtn = menuBtn.contains(e.target);//메뉴버튼 클릭
+      // console.log(isClickInside, isClickMenuBtn)
+
+      if (!isClickInside && !isClickMenuBtn) {
+        mega.classList.remove("open");
+      }
+    })
+
+
+  </script>
+</body>
+
+</html>

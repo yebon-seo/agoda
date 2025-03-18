@@ -1,0 +1,157 @@
+#login {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+#login > .container{
+  width: 600px;
+  height: 884px;
+  overflow: auto;
+  padding: 0 50px 50px 50px ;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  /* margin: auto;
+  inset: 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login > .container > section > .close > button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: #333;
+  position: absolute;
+  top: 10px;right: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+#login > .container > section > .logo {
+  display: block;
+  text-align: center;
+  padding-top: 50px;
+}
+#login > .container > section > .logo img {
+  object-fit: cover;
+  margin-bottom: 17px;
+}
+#login > .container > section > .logo h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 17px;
+}
+#login > .container > section > .logo p {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#login > .container > section > ul {
+  display: flex;
+  justify-content: center;
+}
+#login > .container > section > ul > li {
+  width: 250px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+/* #login > .container > section > .tab-content > form {
+  display: none;
+  text-align: left;
+}
+#login > .container > section > .tab-content > form > label{
+  text-align: left;
+  display: block;
+  margin-bottom: 16px 0;
+} */
+
+#login > .container > section > ul li a {
+  border-bottom: 3px solid transparent;
+  display: block;
+  width: 250px;
+  color: #111;
+}
+
+/*액티브 클래스 추가*/
+#login > .container > section > ul li .active {
+  border-color:#F2b124;
+}
+#login > .container > section > .tab-content > form input {
+  border: 1px solid #bbb;
+  width: 500px;
+  height: 50px;
+  margin: 16px 0;
+}
+#login > .container > section > .tab-content > form input::placeholder {
+  text-indent: 10px;
+}
+#login > .container > section > .tab-content > form button[type=submit]{
+  width: 500px;
+  height: 50px;
+  border: none;
+  margin-top: 14px;
+  background-color: #F2b124;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+} 
+
+
+/*두번째 섹션*/
+section > .bottom > .otp {
+  width: 500px;
+  line-height: 50px;
+  border: 1px solid #F2b124;
+  margin-top: 25px;
+  text-align: center;
+}
+section > .bottom > .otp a{
+  color: #333;
+  font-weight: 500;
+}
+section > .bottom > .tab > ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 23px; /* 오른쪽 정렬된 요소 사이 간격 */
+}
+section > .bottom > .tab > ul > .join {
+  margin-right: auto;
+}
+section > .bottom > .tab > ul > li > a {
+  color: #333;
+  font-weight: 500;
+}
+section > .bottom > .tab > .icon {
+  margin-top: 45px;
+}
+section > .bottom > .tab > .icon > p {
+  text-align: center;
+  color: #333;
+}
+section > .bottom > .tab > .icon > ul {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin: 25px 0;
+}
+section > .bottom > .tab > .icon > h4 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+section > .bottom > .tab > .icon > h4 > span {
+  color: #0283DF;
+}

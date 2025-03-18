@@ -1,0 +1,31 @@
+#footer {
+  min-width: 1280px;
+  padding: 50px 0;
+  margin-top: 140px;
+  background-color: #333;
+}
+#footer .wrap {
+  width: 1280px;
+  padding: 0 45px;
+  margin: auto;
+}
+#footer .wrap section ul {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+#footer .wrap section ul li a{
+  color: #f1f1f1;
+}
+#footer .wrap section .txt {
+  color: #f1f1f1;
+  padding: 50px 0;
+  text-align: center;
+  font-weight: 300;
+}
+#footer .wrap section .pic {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}

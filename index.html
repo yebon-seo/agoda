@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아고다 홈페이지</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+
+
+<body>
+  <!--로그인 모달창-->
+  <div id="login">
+    <article class="container">
+      <section>
+        <div class="close">
+          <button onclick="pClose()">&times;</button>
+        </div>
+        <div class="logo">
+          <img src="images/logo.svg" alt="로고">
+          <h2>로그인</h2>
+          <p>해당 페이지를 이용하시려면 본인 확인을 위해 로그인 해 주시기 바랍니다.</p>
+        </div>
+        <ul>
+          <li><a class="active tab" href="#">이메일</a></li>
+          <li><a class="tab" href="#">휴대전화</a></li>
+        </ul>
+        <div class="tab-content">
+          <form style="display: block;">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일 입력">
+            <label for="pw1">비밀번호</label>
+            <input type="password" id="pw1" name="pw1" placeholder="비밀번호 입력">
+
+            <button type="submit">로그인</button>
+          </form>
+          <form style="display: none;">
+            <label for="tel">휴대폰 번호</label>
+            <input type="tel" id="tel" name="tel" placeholder="휴대폰 번호 입력">
+            <label for="pw2">비밀번호</label>
+            <input type="password" id="pw2" name="pw2" placeholder="비밀번호 입력">
+
+            <button type="submit">로그인</button>
+          </form>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="bottom">
+          <div class="otp">
+            <a href="#">OTP로 로그인하기</a>
+          </div>
+          <div class="tab">
+            <ul>
+              <li class="join"><a href="#">회원가입</a></li>
+              <li><a href="#">아이디 찾기</a></li>
+              <li><a href="#">비밀번호 찾기</a></li>
+            </ul>
+            <div class="icon">
+              <p>아래 계정을 이용해 로그인</p>
+              <ul>
+                <li><a href=#><img src="images/apple.png" alt=""></a></li>
+                <li><a href=#><img src="images/kakao.png" alt=""></a></li>
+                <li><a href=#><img src="images/facebook.png" alt=""></a></li>
+                <li><a href=#><img src="images/google.png" alt=""></a></li>
+              </ul>
+              <h4>로그인함으로써 아고다의 <span>이용 약관</span> 및 <span>개인정보 처리방침</span>에 동의 합니다.</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+
+  <!--탑버튼-->
+  <div class="top-btn">
+    <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
+  </div>
+
+
+
+
+  <!-- header -->
+  <div class="notice" id="top-btn">
+    <article class="top">
+      <p>공지사항</p>
+    </article>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="search-container">
+        <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+        <input type="text" placeholder="검색어를 입력해주세요.">
+        <ul>
+          <li><a href="#"><img src="images/mynaui_bell.svg" alt="알림">알림</a></li>
+          <li><a href="#"><img src="images/mypage.svg" alt="마이페이지">마이페이지</a></li>
+          <li><a href="#"><img src="images/lucide_calendar.svg" alt="예약내역">예약내역</a></li>
+          <li><a href="#" onclick="popup()"><img src="images/login_.svg" alt="로그인">로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="gnb">
+        <div class="left-tab">
+          <ul>
+            <li class="menu"><img onclick="toggleMenu()" src="images/menu.svg" alt="menu">
+              <div class="mega">
+                <div class="sub">
+                  <h2>크루즈</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">아시아</a></li>
+                    <li><a href="#">유럽</a></li>
+                    <li><a href="#">미주</a></li>
+                    <li><a href="#">대양주</a></li>
+                  </ul>
+                </div>
+                <div class="sub">
+                  <h2>차량 / 골프 서비스</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">공항이동 서비스</a></li>
+                    <li><a href="#">골프 서비스</a></li>
+                    <li><a href="#">렌트카 서비스</a></li>
+                  </ul>
+                </div>
+                <div class="sub">
+                  <h2>아고다 마일리지</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">마일리지 샵</a></li>
+                    <li><a href="#">아고다 멤버스</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">해외여행</a></li>
+            <li><a href="#">국내여행</a></li>
+            <li><a href="#">항공</a></li>
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">항공+호텔</a></li>
+            <li><a href="#">투어패스</a></li>
+            <li><a href="#">공항이동서비스</a></li>
+          </ul>
+        </div>
+
+        <!-- right-tab을 하나의 div로 묶어서 오른쪽에 배치 -->
+        <div class="right-tab">
+          <ul>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- 배너와 검색창 -->
+  <main>
+    <div class="container">
+
+      <!-- 배경이미지 -->
+      <section id="banner">
+        <article class="auto-slide">
+          <div class="slide">
+            <img src="images/bgimg1.svg" alt="">
+            <div class="txt">
+              <h2>유럽과 아시아의 교차로,</h2>
+              <h1>튀르키예</h1>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bgimg2.svg" alt="">
+            <div class="txt">
+              <h2>High Class</h2>
+              <h1>여행의 품격을 높이다</h1>
+              <p>
+                &#35;비즈니스클래스 &#35;크루즈여행<br>
+                &#35;라틴 아메리카 &#35;아프리카 &#35;이색테마여행
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bgimg3.svg" alt="">
+            <div class="txt">
+              <h2>무비자로 떠나는 중국여행!</h2>
+              <h1>오늘 바로 출발</h1>
+              <p>
+                부담없이 즐기는 여행<br>
+                12/31일 까지 30일 체류가능
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bgimg4.svg" alt="">
+            <div class="txt">
+              <h2>2025 일본은 지금,</h2>
+              <h1>벚꽃만끽</h1>
+              <p>
+                일본 많이 가보셨나요?<br>
+                &#35;일본 전지역 개화시기 &#35;벚꽃보러떠나봄
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bgimg5.svg" alt="">
+            <div class="txt">
+              <h2>평범한 일상도 특별해지는,</h2>
+              <h1>프랑스 ZOOM IN</h1>
+              <p>
+                지구를 생각하는 지속가능 여행<br>
+                &#35;일드프랑스 &#35;노르망디 &#35;남프랑스
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!--수정안되서..삭제 
+        <div class="btn">
+          <button>&lt;</button>
+          <button>&gt;</button>
+        </div> -->
+
+      </section>
+
+      <!-- 검색페이지 -->
+      <section id="select-box">
+        <article class="hotel">
+          <div class="title">
+            <h2>호텔검색</h2>
+          </div>
+          <article class="select">
+            <div class="country">
+              <input type="text" placeholder="지역을 입력해주세요.">
+            </div>
+            <div class="check-con">
+              <div class="check">
+                <span>체크인</span>
+                <input type="date" value="">
+              </div>
+              <div class="check">
+                <span>체크아웃</span>
+                <input type="date" value="">
+              </div>
+            </div>
+            <div class="people">
+              <img src="images/people.png" alt="인원">
+              <p>인원</p>
+            </div>
+            <div class="room">
+              <img src="images/room.png" alt="객실">
+              <p>객실</p>
+            </div>
+          </article>
+          <div class="btn">
+            <a href="search.html">검색하기</a>
+          </div>
+        </article>
+        <article class="recent">
+          <h2>최근검색</h2>
+        </article>
+      </section>
+    </div>
+  </main>
+
+
+  <!-- 추천호텔 -->
+  <div id="card-box">
+    <article class="wrap">
+      <section>
+        <h2>인기 <span>지역별</span> 추천 호텔</h2>
+        <div>
+          <div class="card">
+            <img src="images/paris.png" alt="hotel">
+            <div class="txt">
+              <p>4성급</p>
+              <h2>머큐어 파리 가르 드 리옹TGV</h2>
+              <p>Mercure Paris Gare De Lyon TGV</p>
+              <h3>245,635 <span>원 ~</span></h3>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/viet.png" alt="hotel">
+            <div class="txt">
+              <p>5성급</p>
+              <h2>인터컨티넨탈 나트랑</h2>
+              <p>InterContinental Nha Trang</p>
+              <h3>208,454 <span>원 ~</span></h3>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/oska.png" alt="hotel">
+            <div class="txt">
+              <p>5성급</p>
+              <h2>칸데오 호텔 오사카 더 타워</h2>
+              <p>Candeo Hotels Osaka The Tower</p>
+              <h3>126,690<span>원 ~</span></h3>
+            </div>
+          </div>
+          <div class="btn">
+            <button>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+
+  <!-- 아고다추천숙소 -->
+  <div id="recommend">
+    <article class="wrap">
+      <section>
+        <h2>아고다 <span>추천 숙소</span></h2>
+        <div class="card-wrap">
+          <div class="card">
+            <img src="images/card1.png" alt="">
+            <div class="txt">
+              <h2>&#35;부모님과 함께 가족여행</h2>
+              <p>나트랑 - 퓨전 리조트</p>
+              <hr>
+              <h3>~ 499,100 <span>원</span></h3>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/card2.png" alt="">
+            <div class="txt">
+              <h2>&#35;연인과 함께 추억여행</h2>
+              <p>괌 - 두짓타니 괌 리조트</p>
+              <hr>
+              <h3>~ 397,200 <span>원</span></h3>
+            </div>
+          </div>
+          <div class="btn">
+            <button>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+  <!-- 광고배너 -->
+  <div id="ad-banner">
+    <article class="wrap">
+
+      <p><a href="#">&gt; 자세한 내용 확인하기</a></p>
+    </article>
+  </div>
+
+
+  <!-- 해외 인기 여행지 -->
+  <div id="popular">
+    <article class="wrap">
+      <section>
+        <h2>해외 <span>인기 여행지</span></h2>
+        <div class="list-wrap">
+          <div class="list">
+            <img src="images/blank1.png" alt="">
+          </div>
+          <div class="list">
+            <img src="images/viet-2.png" alt="">
+            <p>호치민</p>
+            <p class="sub-txt">숙소 15,546 개</p>
+          </div>
+          <div class="list">
+            <img src="images/japan.png" alt="">
+            <p>도쿄</p>
+            <p class="sub-txt">숙소 12,486 개</p>
+          </div>
+          <div class="list">
+            <img src="images/pataya.png" alt="">
+            <p>파타야</p>
+            <p class="sub-txt">숙소 11,909 개</p>
+          </div>
+          <div class="list">
+            <img src="images/mai.png" alt="">
+            <p>치앙마이</p>
+            <p class="sub-txt">숙소 12,048 개</p>
+          </div>
+          <div class="list">
+            <img src="images/blank2.png" alt="">
+          </div>
+        </div>
+
+        <p><a href="#">해외 인기여행지 더보기 &gt;</a></p>
+      </section>
+    </article>
+  </div>
+
+
+  <!-- 나에게 맞는 추천 여행지 -->
+  <div id="suit">
+    <article class="wrap">
+      <h2>나에게 맞는 <span>추천 여행지</span></h2>
+      <ul>
+        <li class="active"><a href=#>가족여행 추천 호텔 &amp; 리조트</a></li>
+        <li><a href=#>커플/친구여행 추천 숙소</a></li>
+        <li><a href=#>휴양지 매니아 추천 숙소</a></li>
+        <li><a href=#>럭셔리 씨티호텔</a></li>
+      </ul>
+      <section class="pic-container">
+        <div class="pic">
+          <img src="images/rec1.png" alt="">
+          <div class="txt">
+            <div>
+              <p>제이파크 아일랜드 리조트 & 워터파크</p>
+              <p>311,700 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/rec2.png" alt="">
+          <div class="txt">
+            <div>
+              <p>빈펄 리조트 스파 & 나트랑 베이</p>
+              <p>125,180 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/rec3.png" alt="">
+          <div class="txt">
+            <div>
+              <p>호시노 리조트 리조나레 괌</p>
+              <p>238,450 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/rec4.png" alt="">
+          <div class="txt">
+            <div>
+              <p>사이판 월드 리조트</p>
+              <p>498,670 원 ~</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+  <!-- 숙소 프로모션 -->
+  <div id="promotion">
+    <article class="wrap">
+      <section>
+        <h2>숙소 <span>프로모션</span></h2>
+        <div class="card-wrap">
+          <div class="card">
+            <img src="images/pro1.png" alt="">
+            <div class="txt">
+              <h3>얼리버드 특가! 단 15일만!</h3>
+              <p>기간 : 2025.03.01 - 03.15</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/pro2.png" alt="">
+            <div class="txt">
+              <h3>SNS에 숙박후기 남기고 1만원 환급 받아가세요!</h3>
+              <p>기간 : 2025.03.01 - 04.20</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/pro3.png" alt="">
+            <div class="txt">
+              <h3>유럽여행 할인 쿠폰</h3>
+              <p>프로모션 코드 : AGODADEAL5</p>
+            </div>
+          </div>
+          <div class="btn">
+            <button>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+        <p><a href="#">더보기 &gt;</a></p>
+      </section>
+    </article>
+  </div>
+
+
+  <!-- footer -->
+  <div id="footer">
+    <article class="wrap">
+      <section>
+        <ul>
+          <li><a href=#>도움말 문의</a></li>
+          <li><a href=#>회사정보</a></li>
+          <li><a href=#>여행지 국가별 정보</a></li>
+          <li><a href=#>파트너스</a></li>
+          <li><a href=#>모바일</a></li>
+        </ul>
+        <div class="txt">
+          <p>All material herein © 2005 – 2025 Agoda Company Pte. Ltd., All Rights Reserved.</p>
+          <br>
+          <p>아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의 일부입니다.</p>
+        </div>
+        <div class="pic">
+          <img src="images/foot1.png" alt="">
+          <img src="images/foot2.png" alt="">
+          <img src="images/foot3.png" alt="">
+          <img src="images/booking4.png" alt="">
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    /*로그인 모달창*/
+    const login = document.querySelector("#login");
+
+    function popup() {
+      login.style.display = "block"
+    }
+    function pClose() {
+      login.style.display = "none"
+    }
+
+    const tabs = document.querySelectorAll(".tab");
+    const tabContent = document.querySelectorAll(".tab-content > form");
+
+    tabs.forEach((tab, index) =>
+      tab.addEventListener("click", function () {
+        //console.log(index)
+        tabs.forEach(tab => tab.classList.remove("active"));
+        tab.classList.add("active");
+
+        tabContent.forEach(form => form.style.display = "none")
+        tabContent[index].style.display = "block";
+      })
+    )
+
+
+    /*top-btn*/
+    const topBtn = document.querySelector(".top-btn");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+        topBtn.style.opacity = "1";
+      } else {
+        topBtn.style.opacity = "0"
+        // topBtn.style.display = "none";
+      }
+    })
+
+    /* 전체메뉴*/
+    const mega = document.querySelector(".mega");
+    const menuBtn = document.querySelector(".menu");
+
+    function toggleMenu() {
+      mega.classList.toggle("open");
+    }
+
+    window.addEventListener("click", (e) => {
+      const isClickInside = mega.contains(e.target);//메뉴 내부 클릭 여부
+      const isClickMenuBtn = menuBtn.contains(e.target);//메뉴버튼 클릭
+      // console.log(isClickInside, isClickMenuBtn)
+
+      if (!isClickInside && !isClickMenuBtn) {
+        mega.classList.remove("open");
+      }
+    })
+
+    /*이미지 슬라이더*/
+    document.addEventListener("DOMContentLoaded", function() {
+      const slides = document.querySelectorAll(".slide");
+      const banner = document.querySelector("#banner");
+
+      let currentIndex = 0;//현재 슬라이드 인덱스~
+      const intervalTime = 3000;/*3초 >3<*/
+      let slideInterval; //setInterval 담아주세용
+
+      /*배경색*/
+      const bgColors = ['#BDE9FF','#8E627B', '#A9A3A4' ,'#FFBFD1', '#B39992'];
+      /*h1*/
+      const h1Colors = ['#155781', '#C4FCF0', '#F1F1F1', '#963669', '#4D1011'];
+      /*h2*/
+      const h2Colors = ['#F1F1F1', '#F1F1F1', '#F05C64', '#F1F1F1', '#F1F1F1'];
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("show", i === index);
+        });
+
+        //배경색 변경
+        banner.style.backgroundColor = bgColors[index];
+        //글자색 변경
+        const changeSlides = slides[index];
+        const h1 = changeSlides.querySelector("h1");
+        const h2 = changeSlides.querySelector("h2");
+        
+        h1.style.color = h1Colors[index];
+        h2.style.color = h2Colors[index];
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length; 
+        showSlide(currentIndex);
+      }
+
+      function startSlideShow() {
+        slideInterval = setInterval(nextSlide, intervalTime);
+      }
+      function stopSlideshow() {
+        clearInterval(slideInterval);
+      }
+
+      //초기 설정
+      showSlide(currentIndex); //0번 인덱스부터 시쟉ㅋ
+      startSlideShow();
+
+      //마우스 올리면 슬라이드 멈춤
+      banner.addEventListener ("mouseenter", stopSlideshow);
+      banner.addEventListener ("mouseleave", startSlideShow);
+    })
+
+  </script>
+</body>
+
+</html>
