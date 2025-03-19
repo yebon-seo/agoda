@@ -1,0 +1,58 @@
+#details-main {
+  min-width: 1280px;
+}
+
+#details-main > .container {
+  width: 1280px;
+  padding: 0 45px;
+  margin: auto;
+}
+/*대표 이미지 전체*/
+#details-main > .container > .img-box {
+  display: flex;
+  gap:24px;
+  margin-top: 70px;
+  position: relative;
+}
+#details-main > .container > .img-box > .t-img > img{
+  width: 600px;
+  height: 500px;
+  display: block;
+  border-radius: 10px;
+}
+#details-main > .container > .img-box > .s-img {
+display: flex;
+gap: 25px;
+flex-wrap: wrap;
+}
+#details-main > .container > .img-box > .s-img > img {
+  display: block;
+  width: 270px;
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*이미지 좌우버튼*/
+#details-main > .container > .img-box > .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#details-main > .container > .img-box > .btn > p {
+  width: 50px;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+#details-main > .container > .img-box:hover .btn {
+  cursor: pointer;
+  opacity: 1;
+}

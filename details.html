@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세페이지</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/details.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+  <!--탑버튼-->
+  <div class="top-btn">
+    <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
+  </div>
+
+  <!-- header -->
+  <div class="notice" id="top-btn">
+    <article class="top">
+      <p>공지사항</p>
+    </article>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="search-container">
+        <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+        <input type="text" placeholder="검색어를 입력해주세요.">
+        <ul>
+          <li><a href="#"><img src="images/mynaui_bell.svg" alt="알림">알림</a></li>
+          <li><a href="#"><img src="images/mypage.svg" alt="마이페이지">마이페이지</a></li>
+          <li><a href="#"><img src="images/lucide_calendar.svg" alt="예약내역">예약내역</a></li>
+          <li><a href="#" onclick="popup()"><img src="images/login_.svg" alt="로그인">로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="gnb">
+        <div class="left-tab">
+          <ul>
+            <li class="menu"><img onclick="toggleMenu()" src="images/menu.svg" alt="menu">
+              <div class="mega">
+                <div class="sub">
+                  <h2>크루즈</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">아시아</a></li>
+                    <li><a href="#">유럽</a></li>
+                    <li><a href="#">미주</a></li>
+                    <li><a href="#">대양주</a></li>
+                  </ul>
+                </div>
+                <div class="sub">
+                  <h2>차량 / 골프 서비스</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">공항이동 서비스</a></li>
+                    <li><a href="#">골프 서비스</a></li>
+                    <li><a href="#">렌트카 서비스</a></li>
+                  </ul>
+                </div>
+                <div class="sub">
+                  <h2>아고다 마일리지</h2>
+                  <hr>
+                  <ul>
+                    <li><a href="#">마일리지 샵</a></li>
+                    <li><a href="#">아고다 멤버스</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">해외여행</a></li>
+            <li><a href="#">국내여행</a></li>
+            <li><a href="#">항공</a></li>
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">항공+호텔</a></li>
+            <li><a href="#">투어패스</a></li>
+            <li><a href="#">공항이동서비스</a></li>
+          </ul>
+        </div>
+
+        <!-- right-tab을 하나의 div로 묶어서 오른쪽에 배치 -->
+        <div class="right-tab">
+          <ul>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!----------------------------------->
+
+  <div id="details-main">
+    <div class="container">
+      <article class="img-box">
+        <section class="t-img">
+          <img src="images/t-img.png" alt="대표이미지">
+        </section>
+        <section class="s-img">
+          <img src="images/s-img1.png" alt="대표이미지">
+          <img src="images/s-img2.png" alt="대표이미지">
+          <img src="images/s-img3.png" alt="대표이미지">
+          <img src="images/s-img4.png" alt="대표이미지">
+          <img src="images/s-img5.png" alt="대표이미지">
+          <img src="images/s-img6.png" alt="대표이미지">
+        </section>
+        <section class="btn">
+          <p class="prev">&lt;</p>
+          <p class="next">&gt;</p>
+        </section>
+      </article>
+    </div>
+  </div>
+
+
+  <!-- footer ------------------------->
+  <div id="footer">
+    <article class="wrap">
+      <section>
+        <ul>
+          <li><a href=#>도움말 문의</a></li>
+          <li><a href=#>회사정보</a></li>
+          <li><a href=#>여행지 국가별 정보</a></li>
+          <li><a href=#>파트너스</a></li>
+          <li><a href=#>모바일</a></li>
+        </ul>
+        <div class="txt">
+          <p>All material herein © 2005 – 2025 Agoda Company Pte. Ltd., All Rights Reserved.</p>
+          <br>
+          <p>아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의 일부입니다.</p>
+        </div>
+        <div class="pic">
+          <img src="images/foot1.png" alt="">
+          <img src="images/foot2.png" alt="">
+          <img src="images/foot3.png" alt="">
+          <img src="images/booking4.png" alt="">
+        </div>
+      </section>
+    </article>
+  </div>
+</body>
+
+</html>
+<!----------------------------------->

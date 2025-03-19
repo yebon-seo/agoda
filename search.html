@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <!----------------------------------->
   <!--탑버튼-->
   <div class="top-btn">
     <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
@@ -92,6 +92,8 @@
     </div>
   </header>
 
+
+
   <!-- 검색창 시작 -->
   <main id="main">
     <div class="container">
@@ -114,6 +116,10 @@
           <img src="images/user.png" alt="인원">
           <p>성인2,객실1</p>
         </div>
+        <div class="view-map">
+          <img src="images/mapicon.png" alt="지도">
+          <p>지도로 보기</p>
+        </div>
       </section>
 
       <section class="result-container">
@@ -130,7 +136,7 @@
 
           <div class="research-box">
             <h2>결과 내 호텔 재검색</h2>
-            <p><input type="text">&#10133;</p>
+            <p><input type="text"><span style="color: gray !important;">&#10133;</span></p>
           </div>
 
           <p>&bull;영문으로 검색하시면 더 정확한 결과를 확인하실 수 있습니다.</p>
@@ -162,7 +168,7 @@
           </div>
 
           <div class="result-wrapper">
-            <article class="result-card">
+            <article class="result-card" style="cursor: pointer;" onclick="location.href='details.html'">
               <img src="images/hotel3.png" alt="hotel">
               <div>
               <div class="star">
@@ -332,22 +338,14 @@
       </div>
     </div>
   </main>
+  <!----------------------------------->
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-  <!-- footer -->
+  <!-- footer ------------------------->
   <div id="footer">
     <article class="wrap">
       <section>
@@ -372,24 +370,12 @@
       </section>
     </article>
   </div>
+  <!----------------------------------->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!----------------------------------->
   <script>
     /*메인페이지로 이동*/
     document.querySelector(".logo").addEventListener("click", function () {
