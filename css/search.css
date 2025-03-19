@@ -162,6 +162,24 @@
   line-height: 50px;
   border-bottom: 1px solid #bbb;
   position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.result-container > .left-result > ul > li > form {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  display: none;
+  user-select: none;
+}
+.result-container > .left-result > ul > li > form.show {
+  display: block;
+}
+.result-container > .left-result > ul > li > form > p {
+  color: #444;
+  line-height: 35px;
+}
+.result-container > .left-result > ul > li > form > p > input{
+  margin-right: 0 6px;
 }
 .result-container > .left-result > ul > li::after {
   content:"";
@@ -174,8 +192,8 @@
   display: block;
   position: absolute; /* li 내에서 절대 위치 설정 */
   left: 95%;
-  top: 50%; /* 세로 중앙 정렬 */
-  transform: translate(-50%,-50%); /* 정확한 중앙 정렬을 위해 transform 사용 */
+  top: 18px; /* 세로 중앙 정렬 */
+  transform: translateX(-50%); /* 정확한 중앙 정렬을 위해 transform 사용 */
 }
 
 .result-container > .right-result {
