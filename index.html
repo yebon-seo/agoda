@@ -82,14 +82,14 @@
 
   <!--탑버튼-->
   <div class="top-btn">
-    <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
+    <a href="#"><img src="images/top-btn.png" alt=""></a>
   </div>
 
 
 
 
   <!-- header -->
-  <div class="notice" id="top-btn">
+  <div class="notice">
     <article class="top">
       <p>공지사항</p>
     </article>
@@ -551,14 +551,19 @@
 
     /*top-btn*/
     const topBtn = document.querySelector(".top-btn");
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll",() => {
       if (window.scrollY > 300) {
         topBtn.style.display = "block";
         topBtn.style.opacity = "1";
-      } else {
+      } else if(window.scrollY < 100){
         topBtn.style.opacity = "0"
+      
         // topBtn.style.display = "none";
       }
+    })
+    //탑버튼 클릭시
+    topBtn.addEventListener("click", () => {
+      scrollTo({ top: 0, behavior: "smooth"})
     })
 
     /* 전체메뉴*/
@@ -580,7 +585,7 @@
     })
 
     /*이미지 슬라이더*/
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const slides = document.querySelectorAll(".slide");
       const banner = document.querySelector("#banner");
 
@@ -589,7 +594,7 @@
       let slideInterval; //setInterval 담아주세용
 
       /*배경색*/
-      const bgColors = ['#BDE9FF','#8E627B', '#A9A3A4' ,'#FFBFD1', '#B39992'];
+      const bgColors = ['#BDE9FF', '#8E627B', '#A9A3A4', '#FFBFD1', '#B39992'];
       /*h1*/
       const h1Colors = ['#155781', '#C4FCF0', '#F1F1F1', '#963669', '#4D1011'];
       /*h2*/
@@ -606,13 +611,13 @@
         const changeSlides = slides[index];
         const h1 = changeSlides.querySelector("h1");
         const h2 = changeSlides.querySelector("h2");
-        
+
         h1.style.color = h1Colors[index];
         h2.style.color = h2Colors[index];
       }
 
       function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length; 
+        currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
       }
 
@@ -628,8 +633,8 @@
       startSlideShow();
 
       //마우스 올리면 슬라이드 멈춤
-      banner.addEventListener ("mouseenter", stopSlideshow);
-      banner.addEventListener ("mouseleave", startSlideShow);
+      banner.addEventListener("mouseenter", stopSlideshow);
+      banner.addEventListener("mouseleave", startSlideShow);
     })
 
   </script>

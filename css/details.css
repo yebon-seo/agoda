@@ -43,7 +43,10 @@ flex-wrap: wrap;
   opacity: 0;
   transition: opacity 0.5s;
 }
-#details-main > .container > .img-box > .btn > p {
+#details-main > .container > .img-box > .btn > p > .next {
+  right: 0;
+}
+#details-main > .container > .img-box > .btn > i {
   width: 50px;
   line-height: 50px;
   background-color: rgba(0, 0, 0, 0.5);
