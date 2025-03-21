@@ -22,9 +22,9 @@
   border-radius: 10px;
 }
 #details-main > .container > .img-box > .s-img {
-display: flex;
-gap: 25px;
-flex-wrap: wrap;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 #details-main > .container > .img-box > .s-img > img {
   display: block;
@@ -100,16 +100,35 @@ flex-wrap: wrap;
   color: #333;
   margin-top: 6px;
 }
+
+/*주소부분 : 미들*/
 .hotel-title > .middle {
   display: flex;
   justify-content: space-between;
 }
 .hotel-title > .middle > .txt {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.hotel-title > .middle > .txt > img{
-  width: 18px;
-  height: 18px;
+.hotel-title > .middle > .txt > div {
+  display: flex;
+}
+.hotel-title > .middle > .txt > div > img {
+  width: 21px;
+  height: 20px;
+  margin-right: 6px;
+}
+.hotel-title > .middle > .txt > div > p {
+  line-height: 20px;
+  color: #555;
+  margin-right: 10px;
+}
+.hotel-title > .middle > .txt > div > span {
+  padding-left: 10px;
+  color: #555;
+  border-left: 1px solid #555;
 }
 .hotel-title > .middle > .map-view {
   display: flex;
@@ -132,3 +151,160 @@ flex-wrap: wrap;
   font-weight: 600;
   color: #333;
 }
+
+/*박스 : bottom*/
+.hotel-title > .bottom {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+/*공통속성*/
+.hotel-title > .bottom > .checkIn {
+  display: flex;
+  width: 400px;
+  height: 120px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.hotel-title > .bottom > .checkIn > .card {
+  padding: 16px 19px;
+  width: 200px;
+  text-align: center;
+}
+.hotel-title > .bottom > .checkIn > .card > h2{
+  font-size: 14px;
+  font-weight: 500;
+  color: #bbb;
+  /* text-align: center; */
+  margin-bottom: 16px;
+}
+/*왼쪽카드*/
+.hotel-title > .bottom > .checkIn > .card.left > b {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  /* text-align: center; */
+}
+.hotel-title > .bottom > .checkIn > .card.left > p{
+  font-weight: 700;
+  color: #0283DF;
+  text-align: center;
+  margin-top: 16px;
+}
+.hotel-title > .bottom > .checkIn > .card.left {
+  border-right: 1px solid #ddd;
+}
+/*오른쪽카드*/
+.hotel-title > .bottom > .checkIn > .right > img {
+  display: inline-block;
+  width: 21px;
+  height: 20px;
+}
+.hotel-title > .bottom > .checkIn > .right > span {
+  color: #333;
+  font-weight: 600;
+}
+
+/*포함사항 박스*/
+.hotel-title > .bottom > .include {
+  width: 380px;
+  height: 120px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+}
+.hotel-title > .bottom > .include > h2 {
+  font-size: 14px;
+  font-weight: 600px;
+  color: #333;
+}
+.hotel-title > .bottom > .include > p {
+  font-size: 12px;
+  color: #999;
+  margin-top: 16px;
+}
+
+/*현지 추가 지불사항*/
+.hotel-title > .bottom > .add-pay {
+  width: 380px;
+  height: 120px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+}
+.hotel-title > .bottom > .add-pay > h2 {
+  font-size: 14px;
+  font-weight: 600px;
+  color: #333;
+}
+.hotel-title > .bottom > .add-pay > p {
+  font-size: 12px;
+  color: #999;
+  margin-top: 16px;
+}
+.hotel-title > .bottom > .add-pay > i {
+  text-align: right;
+  color: #bbb;
+  display: block;
+  cursor: pointer;
+}
+
+/*탭 아이템 시작*/
+.tab-item {
+  margin :50px 0;
+}
+.tab-item > .btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 25px;
+}
+.tab-item > .btn > .tab-btn {
+  flex: 1;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /**/
+}
+.tab-item > .btn > .tab-btn.active {
+  box-shadow: inset 0 -3px 0 #555;
+  background-color: #ddd;
+  /* border-bottom: 3px solid #555; */
+}
+.tab-item > .btn > .tab-btn:hover {
+  background-color: #d9d9d9;
+}
+
+/*컨텐츠 부분*/
+.tab-item > .content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+.tab-item > .content > .title {
+  display: flex;
+  gap: 6px;
+}
+.tab-item > .content > .title > img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.tab-item > .content > .title > h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0283DF;
+  line-height: 24px;
+}
+.tab-item > .content > .txt > p {
+  margin-top: 25px;
+  color: #555;
+}
+
