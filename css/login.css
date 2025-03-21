@@ -9,7 +9,7 @@
 #login > .container{
   width: 600px;
   height: 884px;
-  overflow: auto;
+  overflow-y: hidden;
   padding: 0 50px 50px 50px ;
   background-color: #fff;
   border-radius: 5px;

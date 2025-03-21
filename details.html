@@ -7,11 +7,76 @@
   <title>상세페이지</title>
   <script src="https://kit.fontawesome.com/63c7e48b93.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/details.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
+   <!--로그인 모달창-->
+   <div id="login">
+    <article class="container">
+      <section>
+        <div class="close">
+          <button onclick="pClose()">&times;</button>
+        </div>
+        <div class="logo">
+          <img src="images/logo.svg" alt="로고">
+          <h2>로그인</h2>
+          <p>해당 페이지를 이용하시려면 본인 확인을 위해 로그인 해 주시기 바랍니다.</p>
+        </div>
+        <ul>
+          <li><a class="active tab" href="#">이메일</a></li>
+          <li><a class="tab" href="#">휴대전화</a></li>
+        </ul>
+        <div class="tab-content">
+          <form style="display: block;">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일 입력">
+            <label for="pw1">비밀번호</label>
+            <input type="password" id="pw1" name="pw1" placeholder="비밀번호 입력">
+
+            <button type="submit">로그인</button>
+          </form>
+          <form style="display: none;">
+            <label for="tel">휴대폰 번호</label>
+            <input type="tel" id="tel" name="tel" placeholder="휴대폰 번호 입력">
+            <label for="pw2">비밀번호</label>
+            <input type="password" id="pw2" name="pw2" placeholder="비밀번호 입력">
+
+            <button type="submit">로그인</button>
+          </form>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="bottom">
+          <div class="otp">
+            <a href="#">OTP로 로그인하기</a>
+          </div>
+          <div class="tab">
+            <ul>
+              <li class="join"><a href="#">회원가입</a></li>
+              <li><a href="#">아이디 찾기</a></li>
+              <li><a href="#">비밀번호 찾기</a></li>
+            </ul>
+            <div class="icon">
+              <p>아래 계정을 이용해 로그인</p>
+              <ul>
+                <li><a href=#><img src="images/apple.png" alt=""></a></li>
+                <li><a href=#><img src="images/kakao.png" alt=""></a></li>
+                <li><a href=#><img src="images/facebook.png" alt=""></a></li>
+                <li><a href=#><img src="images/google.png" alt=""></a></li>
+              </ul>
+              <h4>로그인함으로써 아고다의 <span>이용 약관</span> 및 <span>개인정보 처리방침</span>에 동의 합니다.</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+
   <!--탑버튼-->
   <div class="top-btn">
     <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
@@ -27,7 +92,7 @@
   <header>
     <div class="container">
       <div class="search-container">
-        <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+        <a href="index.html"><img src="images/logo.svg" alt="logo" class="logo"></a>
         <input type="text" placeholder="검색어를 입력해주세요.">
         <ul>
           <li><a href="#"><img src="images/mynaui_bell.svg" alt="알림">알림</a></li>
@@ -95,6 +160,7 @@
 
   <div id="details-main">
     <div class="container">
+      <!-- 타이틀 이미지 영역 -->
       <article class="img-box">
         <section class="t-img">
           <img src="images/t-img.png" alt="대표이미지">
@@ -112,6 +178,37 @@
           <i class="fa-solid fa-angle-right"></i>
         </section>
       </article>
+
+      <!-- 타이틀 정보 -->
+      <article class="hotel-title">
+        <section class="header">
+          <p>5성급</p>
+          <div>
+            <h1>더 뉴욕 에디션</h1>
+            <div class="pic">
+            <img src="images/heart1.png" alt="하트">
+            <img src="images/shere.png" alt="공유">
+          </div>
+          </div>
+          <h2>The New York EDITION</h2>
+        </section>
+        <section class="middle">
+          <div class="txt">
+             <img src="images/starimg.png" alt="별"><span><b>4.2</b> / 5 <b>423개</b>의 후기</span>
+             <p><img src="images/mapimg.png" alt="지도">5 Madison Avenue New York(New York)<span>엠파이어스테이트 빌딩 부근에 위치</span></p>
+          </div>
+          <div class="map-view">
+            <img src="images/mapicon.png" alt="지도">
+            <p>지도로 보기</p>
+          </div>
+        </section>
+      </article>
+
+
+
+
+
+
     </div>
   </div>
 
@@ -141,7 +238,33 @@
       </section>
     </article>
   </div>
+  <!----------------------------------->
+
+  <script>
+    /*로그인 모달창*/
+    const login = document.querySelector("#login");
+
+    function popup() {
+      login.style.display = "block"
+    }
+    function pClose() {
+      login.style.display = "none"
+    }
+
+    const tabs = document.querySelectorAll(".tab");
+    const tabContent = document.querySelectorAll(".tab-content > form");
+
+    tabs.forEach((tab, index) =>
+      tab.addEventListener("click", function () {
+        //console.log(index)
+        tabs.forEach(tab => tab.classList.remove("active"));
+        tab.classList.add("active");
+
+        tabContent.forEach(form => form.style.display = "none")
+        tabContent[index].style.display = "block";
+      })
+    )
+  </script>
 </body>
 
 </html>
-<!----------------------------------->

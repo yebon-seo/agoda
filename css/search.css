@@ -175,8 +175,8 @@
   background-color: transparent;
   padding: 0 20px;
 }
-.result-container > .left-result > .research-box input > i { /*★★★★★★★★수정!!!!!*/
-  color: #ccc;
+.result-container > .left-result > .research-box input+i { /*★★★★★★★★수정!!!!!*/
+  color: #aaa;
 }
 .result-container > .left-result > p {
   font-size: 12px;
@@ -208,7 +208,11 @@
 .result-container > .left-result > ul > li > form > p > input{
   margin-right: 0 6px;
 }
-.result-container > .left-result > ul > li::after {
+.result-container > .left-result > ul > li > span {
+  display: inline-block;
+  width: 290px;
+}
+.result-container > .left-result > ul > li > span::after {
   content:"";
   background: url(../images/icondown.png)no-repeat center center;
   background-size: contain; /* 또는 cover로 변경 가능 */
@@ -252,7 +256,7 @@
   gap: 20px;
   border-bottom: 1px solid #bbb;
 }
-.result-container > .right-result > .result-wrapper > .result-card > img {
+.result-container > .right-result > .result-wrapper > .result-card > a > img {
   width: 305px;
   height: 205px;
   border-radius: 16px;
@@ -276,17 +280,22 @@
   display: flex;
   width: 17px;
   height: 15px;
+  cursor: pointer;
 }
 
+/*얘는 하트버튼이야*/
 .result-container > .right-result > .result-wrapper > .result-card >  div > .star > img:nth-of-type(1){
   margin-left: 420px;
   margin-right: 16px;
 }
 .result-container > .right-result > .result-wrapper > .result-card > div > .txt > h2{
-font-size: 20px;
-font-weight: 600;
-color: #333;
-margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+.result-container > .right-result > .result-wrapper > .result-card > div > .txt > h2 > a{
+  color: #333;
 }
 .result-container > .right-result > .result-wrapper > .result-card > div > .txt > h4 {
   font-size: 16px;

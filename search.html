@@ -7,16 +7,107 @@
   <title>검색페이지</title>
   <script src="https://kit.fontawesome.com/63c7e48b93.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/map.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
   <!----------------------------------->
+
+  <!--로그인 모달창-->
+  <div id="login">
+    <article class="container">
+      <section>
+        <div class="close">
+          <button onclick="pClose()">&times;</button>
+        </div>
+        <div class="logo">
+          <img src="images/logo.svg" alt="로고">
+          <h2>로그인</h2>
+          <p>해당 페이지를 이용하시려면 본인 확인을 위해 로그인 해 주시기 바랍니다.</p>
+        </div>
+        <ul>
+          <li><a class="active tab" href="#">이메일</a></li>
+          <li><a class="tab" href="#">휴대전화</a></li>
+        </ul>
+        <div class="tab-content">
+          <form style="display: block;">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일 입력">
+            <label for="pw1">비밀번호</label>
+            <input type="password" id="pw1" name="pw1" placeholder="비밀번호 입력">
+
+            <button type="submit">로그인</button>
+          </form>
+          <form style="display: none;">
+            <label for="tel">휴대폰 번호</label>
+            <input type="tel" id="tel" name="tel" placeholder="휴대폰 번호 입력">
+            <label for="pw2">비밀번호</label>
+            <input type="password" id="pw2" name="pw2" placeholder="비밀번호 입력">
+
+            <button type="submit">로그인</button>
+          </form>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="bottom">
+          <div class="otp">
+            <a href="#">OTP로 로그인하기</a>
+          </div>
+          <div class="tab">
+            <ul>
+              <li class="join"><a href="#">회원가입</a></li>
+              <li><a href="#">아이디 찾기</a></li>
+              <li><a href="#">비밀번호 찾기</a></li>
+            </ul>
+            <div class="icon">
+              <p>아래 계정을 이용해 로그인</p>
+              <ul>
+                <li><a href=#><img src="images/apple.png" alt=""></a></li>
+                <li><a href=#><img src="images/kakao.png" alt=""></a></li>
+                <li><a href=#><img src="images/facebook.png" alt=""></a></li>
+                <li><a href=#><img src="images/google.png" alt=""></a></li>
+              </ul>
+              <h4>로그인함으로써 아고다의 <span>이용 약관</span> 및 <span>개인정보 처리방침</span>에 동의 합니다.</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
   <!--탑버튼-->
   <div class="top-btn">
     <a href="#top-btn"><img src="images/top-btn.png" alt=""></a>
   </div>
+
+  <!-- 지도로 보기 모달팝업 -->
+  <div id="map">
+    <section class="container">
+      <div class="top">
+        <button class="cBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="main-map">
+        <article class="view">
+          <a href="#">지도</a>
+          <a href="#">위성</a>
+        </article>
+        <article class="size">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </article>
+      </div>
+      <article>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9425320370237!2d-73.9899272587917!3d40.74129003593981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a6b478c663%3A0x8e570cc67c69068e!2sThe%20New%20York%20EDITION!5e0!3m2!1sko!2skr!4v1742547186793!5m2!1sko!2skr"
+          width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </article>
+    </section>
+  </div>
+
 
   <!-- header -->
   <div class="notice" id="top-btn">
@@ -28,7 +119,7 @@
   <header>
     <div class="container">
       <div class="search-container">
-        <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+        <a href="index.html"><img src="images/logo.svg" alt="logo" class="logo"></a>
         <input type="text" placeholder="검색어를 입력해주세요.">
         <ul>
           <li><a href="#"><img src="images/mynaui_bell.svg" alt="알림">알림</a></li>
@@ -145,19 +236,19 @@
           <ul>
             <li><span>숙소종류</span>
               <form>
-                <p><input type="checkbox"> 호텔</p>
-                <p><input type="checkbox"> 리조트</p>
-                <p><input type="checkbox"> 모텔</p>
-                <p><input type="checkbox"> 아파트먼트</p>
-                <p><input type="checkbox"> 펜션</p>
+                <p><label><input type="checkbox"> 호텔</label></p>
+                <p><label><input type="checkbox"> 리조트</label></p>
+                <p><label><input type="checkbox"> 모텔</label></p>
+                <p><label><input type="checkbox"> 아파트먼트</label></p>
+                <p><label><input type="checkbox"> 펜션</label></p>
               </form>
             </li>
-            <li>지역</li>
-            <li>이용가능서비스</li>
-            <li>결제관련옵션</li>
-            <li>숙소편의시설 및 서비스</li>
-            <li>투숙객 평가지수</li>
-            <li>침대종류</li>
+            <li><span>지역</span></li>
+            <li><span>이용가능서비스</span></li>
+            <li><span>결제관련옵션</span></li>
+            <li><span>숙소편의시설 및 서비스</span></li>
+            <li><span>투숙객 평가지수</span></li>
+            <li><span>침대종류</span></li>
           </ul>
         </div>
 
@@ -169,162 +260,162 @@
           </div>
 
           <div class="result-wrapper">
-            <article class="result-card" style="cursor: pointer;" onclick="location.href='details.html'">
-              <img src="images/hotel3.png" alt="hotel">
+            <article class="result-card">
+              <a href="details.html" target="_blank"><img src="images/hotel3.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>5성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>더 뉴욕 에디션</h2>
-                <h4>The New York EDITION</h4>
-                <h4>엠파이어스테이트 빌딩 부근에 위치 </h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>1,061,570</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>5성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2><a href="details.html">더 뉴욕 에디션</a></h2>
+                  <h4>The New York EDITION</h4>
+                  <h4>엠파이어스테이트 빌딩 부근에 위치 </h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>1,061,570</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
             <article class="result-card">
-              <img src="images/hotel1.png" alt="hotel">
+              <a><img src="images/hotel1.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>5성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>콘래드 뉴욕 다운타운</h2>
-                <h4>Conrad New York Downtown</h4>
-                <h4>원월드 무역 센터 부근에 위치</h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>744,660</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>5성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2>콘래드 뉴욕 다운타운</h2>
+                  <h4>Conrad New York Downtown</h4>
+                  <h4>원월드 무역 센터 부근에 위치</h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>744,660</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
             <article class="result-card">
-              <img src="images/hotel2.png" alt="hotel">
+              <a><img src="images/hotel2.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>4성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>하얏트 그랜드 센트럴 뉴욕</h2>
-                <h4>Hyatt Grand Central New York</h4>
-                <h4>그랜드 센트럴 터미널 부근에 위치</h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>365,050</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>4성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2>하얏트 그랜드 센트럴 뉴욕</h2>
+                  <h4>Hyatt Grand Central New York</h4>
+                  <h4>그랜드 센트럴 터미널 부근에 위치</h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>365,050</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
             <article class="result-card">
-              <img src="images/hotel4.png" alt="hotel">
+              <a><img src="images/hotel4.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>4성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>더 맨해튼 앳 타임스 스퀘어 호텔, IHG 호텔</h2>
-                <h4>The Manhattan at Times Square Hotel</h4>
-                <h4>브로드웨이 부근에 위치</h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>126,300</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>4성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2>더 맨해튼 앳 타임스 스퀘어 호텔, IHG 호텔</h2>
+                  <h4>The Manhattan at Times Square Hotel</h4>
+                  <h4>브로드웨이 부근에 위치</h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>126,300</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
             <article class="result-card">
-              <img src="images/hotel5.png" alt="hotel">
+              <a><img src="images/hotel5.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>4성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>뉴욕 힐튼 미드타운</h2>
-                <h4>Conrad New York Downtown</h4>
-                <h4>원월드 무역 센터 부근에 위치</h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>173,340</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>4성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2>뉴욕 힐튼 미드타운</h2>
+                  <h4>Conrad New York Downtown</h4>
+                  <h4>원월드 무역 센터 부근에 위치</h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>173,340</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
             <article class="result-card">
-              <img src="images/hotel7.png" alt="hotel">
+              <a><img src="images/hotel7.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>5성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
-                <h4>Sheraton New York Times Square Hotel</h4>
-                <h4>브로드웨이 부근에 위치</h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>344,920</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>5성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2>쉐라톤 뉴욕 타임스 스퀘어 호텔</h2>
+                  <h4>Sheraton New York Times Square Hotel</h4>
+                  <h4>브로드웨이 부근에 위치</h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>344,920</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
             <article class="result-card">
-              <img src="images/hotel6.png" alt="hotel">
+              <a><img src="images/hotel6.png" alt="hotel"></a>
               <div>
-              <div class="star">
-                <p>5성급</p>
-                <img src="images/heart.png" alt="하트">
-                <img src="images/shere.png" alt="하트">
-              </div>
-              <div class="txt">
-                <h2>에퀴녹스 호텔 뉴욕</h2>
-                <h4>Equinox Hotel New York</h4>
-                <h4>브로드웨이 부근에 위치</h4>
-                <div class="map">
-                  <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
-                  <div class="price">
-                    <h2><span>1,541,910</span>원 ~</h2>
-                    <h5>(1박기준/세금봉사료 포함)</h5>
+                <div class="star">
+                  <p>5성급</p>
+                  <img src="images/heart1.png" alt="하트" class="heart">
+                  <img src="images/shere.png" alt="공유">
+                </div>
+                <div class="txt">
+                  <h2>에퀴녹스 호텔 뉴욕</h2>
+                  <h4>Equinox Hotel New York</h4>
+                  <h4>브로드웨이 부근에 위치</h4>
+                  <div class="map">
+                    <p><img src="images/map-pin.svg" alt=""><span>지도로보기</span></p>
+                    <div class="price">
+                      <h2><span>1,541,910</span>원 ~</h2>
+                      <h5>(1박기준/세금봉사료 포함)</h5>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </article>
-            
-            
+
+
           </div>
         </section>
       </section>
@@ -378,6 +469,29 @@
 
   <!----------------------------------->
   <script>
+    /*로그인 모달창*/
+    const login = document.querySelector("#login");
+
+    function popup() {
+      login.style.display = "block"
+    }
+    function pClose() {
+      login.style.display = "none"
+    }
+
+    const tabs = document.querySelectorAll(".tab");
+    const tabContent = document.querySelectorAll(".tab-content > form");
+
+    tabs.forEach((tab, index) =>
+      tab.addEventListener("click", function () {
+        //console.log(index)
+        tabs.forEach(tab => tab.classList.remove("active"));
+        tab.classList.add("active");
+
+        tabContent.forEach(form => form.style.display = "none")
+        tabContent[index].style.display = "block";
+      })
+    )
     /*메인페이지로 이동*/
     document.querySelector(".logo").addEventListener("click", function () {
       window.location.href = "index.html";
@@ -414,11 +528,41 @@
     })
 
     /*필터*/
-    const tab = document.querySelector(".result-container > .left-result > ul > li");
-    const content= document.querySelector(".result-container > .left-result > ul > li > form");
-      tab.addEventListener("click", () => {
-        content.classList.toggle("show")
-      })
+    const tab = document.querySelector(".result-container > .left-result > ul > li > span");
+    const content = document.querySelector(".result-container > .left-result > ul > li > form");
+    tab.addEventListener("click", () => {
+      content.classList.toggle("show")
+    })
+
+    /*하트버튼 클릭시 이미지 교체*/
+    const hearts = document.querySelectorAll(".star > .heart");
+
+    hearts.forEach(heart => heart.addEventListener("click", () => {
+      let pNum = heart.getAttribute("src").substr(-5, 1)
+      if (pNum == 1) {
+        heart.setAttribute("src", `images/heart2.png`)
+      } else {
+        heart.setAttribute("src", `images/heart1.png`)
+      }
+    }))
+
+    /*지도로보기*/
+    const mapBtn = document.querySelector(".view-map");
+    const mapModal = document.querySelector("#map");
+    const cBtn = document.querySelector(".cBtn");
+
+    mapBtn.addEventListener("click", (e) => {
+      mapModal.style.display = "block"
+      mapModal.style.opacity = "1"
+    })
+    cBtn.addEventListener("click", () => {
+      mapModal.style.display = "none"
+    })
+    mapModal.addEventListener("click", (e) => {
+      if (e.target === mapModal) {
+        mapModal.style.display = "none"; // 모달 바깥을 클릭하면 닫힘
+      }
+    });
 
   </script>
 </body>
