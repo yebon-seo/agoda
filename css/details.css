@@ -307,12 +307,13 @@
 .tab-item > .content > .txt > p {
   margin-top: 25px;
   color: #555;
+  font-size: 14px;
 }
 
 /*필터탭*/
 .filter-tab {
   margin-top: 25px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .filter-tab > .filter-wrap {
   display: flex;
@@ -346,6 +347,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 30px;
 }
 .room-type > .room-type-wrap > .title > h2{
   font-size: 20px;
@@ -439,12 +441,17 @@
 /*객실옵션상세*/
 .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap{
   display: flex;
-  border: 1px solid #f1f1f1;
+  border-left: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap:last-child {
   border-radius: 0 0 10px 10px;
 
 }
 .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info{
-  width: 398px;
+  width: 430px;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -452,9 +459,33 @@
   border-right: 1px solid #f1f1f1;
   padding: 20px;
 }
+/*abs 적용할 첫번째 탭*/
+.room-type > .room-type-wrap:first-of-type .d-info{
+  margin-top: 27px;
+  position: relative;
+}
 .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div{
   display: flex;
   gap: 10px;
+}
+
+/*가장저렴 abs*/
+.abs {
+  position: absolute;
+  top: -20px;
+  left: -7px;
+  border: 1px solid #0283DF;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 7px 14px;
+
+}
+.abs p {
+  font-size: 16px;
+  color: #0283DF;
+}
+.abs p > span {
+  font-weight: 600;
 }
 
 /*물음표 버튼 정렬*/
@@ -477,9 +508,81 @@
 /*정원*/
 .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .people {
   display: flex;
-  gap:10px
+  gap:10px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #f1f1f1;
 }
 .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .people > img {
   width: 24px;
   height: 24px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .people > p {
+  font-weight: 600;
+  color: #555;
+}
+
+/*오늘의 요금*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price {
+  display: flex;
+  gap: 17px;
+  align-items: flex-end;
+  margin-left: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > div > h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+}
+/*할인 탭*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > .sale {
+    position: absolute;
+    top: 110px;
+    left: 35px;
+    display: flex;
+    gap: 10px;
+  }
+  .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > .sale > p {
+    padding: 5px;
+    background-color: #FFF1F6;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FF2B2B;
+  }
+  .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > .sale > .bgpink {
+    background-color: #FF2B2B;
+    color: #FFF1F6;
+  }
+/*할인요금표시*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > div > h2 > del {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > div > p {
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  margin-top: 10px;
+}
+/*예약하기 버튼*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > div > h3 {
+  width: 120px;
+  line-height: 50px;
+  background-color: #0283DF;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*예약하기 버튼: hover*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .price > div > h3:hover {
+  background-color: #F2B124;
 }
