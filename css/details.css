@@ -252,7 +252,7 @@
 
 /*탭 아이템 시작*/
 .tab-item {
-  margin :50px 0;
+  margin-top :50px;
 }
 .tab-item > .btn {
   display: flex;
@@ -273,11 +273,12 @@
 }
 .tab-item > .btn > .tab-btn.active {
   box-shadow: inset 0 -3px 0 #555;
-  background-color: #ddd;
+  /* background-color: #f1f1f1; */
   /* border-bottom: 3px solid #555; */
 }
 .tab-item > .btn > .tab-btn:hover {
-  background-color: #d9d9d9;
+  /* background-color: #f1f1f1; */
+  box-shadow: inset 0 -3px 0 #555;
 }
 
 /*컨텐츠 부분*/
@@ -308,3 +309,177 @@
   color: #555;
 }
 
+/*필터탭*/
+.filter-tab {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.filter-tab > .filter-wrap {
+  display: flex;
+  gap: 10px;
+}
+.filter-tab > .filter-wrap > .filter {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid #0283DF;
+  border-radius: 50px;
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.filter-tab > .filter-wrap > .filter:hover {
+  background-color: #0283df19
+}
+.filter-tab > .filter-wrap > .filter > img {
+  width: 12px;
+  height: 14px; 
+}
+.filter-tab > .filter-wrap > .filter > p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0283DF;
+}
+
+/*숙소타입 별 가격정보*/
+.room-type > .room-type-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.room-type > .room-type-wrap > .title > h2{
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.room-type > .room-type-wrap > .cardinfo {
+  display: flex;
+  gap: 25px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 172px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .pic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  object-fit: cover;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .pic > .full {
+  width: 172px;
+  height: 130px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .pic > img{
+  /* outline: 1px solid red; */
+  border-radius: 10px;
+  width: 81px;
+  height: 65px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .info-wrap {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .info-wrap > .info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .info-wrap > .info > img {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  object-fit: cover;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .info-wrap > .info > p{
+  font-weight: 300;
+  color: #555;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-left > .info-wrap > .info:nth-of-type(1) p,
+.room-type > .room-type-wrap > .cardinfo > .card-left > .info-wrap > .info:nth-of-type(7) p {
+  font-weight: 500;
+  color: #0283DF;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right {
+  display: flex;
+  flex-direction: column;
+}
+/*오른쪽 타이틀 : 객실옵션 정원 요금*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-title-info {
+  display: flex;
+  align-items: center;
+  width: 993px;
+  height: 40px;
+  background-color: #f1f1f1;  
+  border-radius: 10px 10px 0 0;
+
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-title-info > h2{
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 304px;
+  margin-left: 10px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-title-info > h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 207px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-title-info > h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/*객실옵션상세*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap{
+  display: flex;
+  border: 1px solid #f1f1f1;
+  border-radius: 0 0 10px 10px;
+
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info{
+  width: 398px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-right: 1px solid #f1f1f1;
+  padding: 20px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div{
+  display: flex;
+  gap: 10px;
+}
+
+/*물음표 버튼 정렬*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div > span img {
+  width: 19px;
+  height: 19px;
+  margin-left: 95px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div > img {
+  width: 16px;
+  height: 16px;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div > p {
+  color: #555;
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div > p > span{
+  color: #F2B124;
+}
+
+/*정원*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .people {
+  display: flex;
+  gap:10px
+}
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .people > img {
+  width: 24px;
+  height: 24px;
+}
