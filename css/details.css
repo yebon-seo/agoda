@@ -1,3 +1,55 @@
+/*물음표 버튼 팝업창*/
+#question-popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+#question-popup > .container {
+  width: 550px;
+  /* height: 300px; */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: relative;
+}
+#question-popup > .container > .qclose {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*닫기버튼 hover시 이벤트*/
+#question-popup > .container > .qclose:hover {
+  color: #0283DF;
+}
+#question-popup > .container > section {
+  margin-bottom: 20px;
+}
+#question-popup > .container > section:nth-last-child(1){
+  margin-bottom: 0;
+}
+#question-popup > .container > section > h2{
+  font-weight: 700;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 6px;
+}
+#question-popup > .container > section > p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+}
+
+/*------------------시작------------------*/
 #details-main {
   min-width: 1280px;
 }
@@ -88,6 +140,9 @@
 .hotel-title > .header > div > .pic {
   display: flex;
   gap: 26px;
+}
+.hotel-title > .header > div > .pic > .heart {
+  cursor: pointer;
 }
 .hotel-title > .header > div > .pic > img {
   width: 28px;
@@ -362,6 +417,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 172px;
+  align-items: flex-start;
 }
 .room-type > .room-type-wrap > .cardinfo > .card-left > .pic {
   display: flex;
@@ -467,6 +523,10 @@
 .room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div{
   display: flex;
   gap: 10px;
+}
+/*물음표버튼*/
+.room-type > .room-type-wrap > .cardinfo > .card-right > .d-wrap > .d-info > div > span {
+  cursor: pointer;
 }
 
 /*가장저렴 abs*/
