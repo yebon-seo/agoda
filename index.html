@@ -408,7 +408,7 @@
         <li><a href=#>휴양지 매니아 추천 숙소</a></li>
         <li><a href=#>럭셔리 씨티호텔</a></li>
       </ul>
-      <section class="pic-container">
+      <section class="pic-container con1">
         <div class="pic">
           <img src="images/rec1.png" alt="">
           <div class="txt">
@@ -442,6 +442,123 @@
             <div>
               <p>사이판 월드 리조트</p>
               <p>498,670 원 ~</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pic-container con2">
+        <div class="pic">
+          <img src="images/santori.png" alt="">
+          <div class="txt">
+            <div>
+              <p>알렉산더 스위트</p>
+              <p>165,120 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/natrang.png" alt="">
+          <div class="txt">
+            <div>
+              <p>퓨전 리조트 깜 라인</p>
+              <p>357,240 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/puket.png" alt="">
+          <div class="txt">
+            <div>
+              <p>아마렐라 리조트</p>
+              <p>313,730 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/bohol.png" alt="">
+          <div class="txt">
+            <div>
+              <p>만다라바 리조트 앤 스파 카론비치</p>
+              <p>254,080원 ~</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="pic-container con3">
+        <div class="pic">
+          <img src="images/con1.png" alt="">
+          <div class="txt">
+            <div>
+              <p>라 레시덴시아, 어 벨몬드 호텔</p>
+              <p>1,130,460 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/con2.png" alt="">
+          <div class="txt">
+            <div>
+              <p>짐바란 푸리, 어 벨몬드 호텔</p>
+              <p>540,190 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/con3.png" alt="">
+          <div class="txt">
+            <div>
+              <p>벨몬드 호텔 치트리아니</p>
+              <p>350,182 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/con4.png" alt="">
+          <div class="txt">
+            <div>
+              <p>나파사이 사무이</p>
+              <p>499,650 원 ~</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pic-container con4">
+        <div class="pic">
+          <img src="images/con4-1.png" alt="">
+          <div class="txt">
+            <div>
+              <p>할레푸나 와이키키 바이 할레쿨라니</p>
+              <p>500,192 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/con4-2.png" alt="">
+          <div class="txt">
+            <div>
+              <p>안다즈 마우이 앳 와일레아 리조트</p>
+              <p>1,581,184 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/con4-3.png" alt="">
+          <div class="txt">
+            <div>
+              <p>만다파, 어 리츠칼튼 리저브</p>
+              <p>1,776,084 원 ~</p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="images/con4-4.png" alt="">
+          <div class="txt">
+            <div>
+              <p>월도프 아스토리아 라스베이거스</p>
+              <p>540,739 원 ~</p>
             </div>
           </div>
         </div>
@@ -500,7 +617,7 @@
           <li><a href=#>모바일</a></li>
         </ul>
         <div class="txt">
-          <p>All material herein © 2005 – 2025 Agoda Company Pte. Ltd., All Rights Reserved.</p>
+          <p>All material herein © 2005 - 2025 Agoda Company Pte. Ltd., All Rights Reserved.</p>
           <br>
           <p>아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의 일부입니다.</p>
         </div>
@@ -561,6 +678,7 @@
         // topBtn.style.display = "none";
       }
     })
+
     //탑버튼 클릭시
     topBtn.addEventListener("click", () => {
       scrollTo({ top: 0, behavior: "smooth"})
@@ -637,6 +755,23 @@
       banner.addEventListener("mouseleave", startSlideShow);
     })
 
+    //나에게 맞는 추천 여행지 
+    const lists = document.querySelectorAll(".wrap ul li");
+    const sections = document.querySelectorAll(".pic-container");
+
+      lists.forEach((list,idx) => {
+        list.addEventListener("click",(e) => {
+          e.preventDefault(); //기본 이벤트 방지
+
+          lists.forEach(list => list.className = "")
+          list.classList.add("active")
+
+          sections.forEach(section => section.style.display = "none");
+
+          sections[idx].style.display = "flex"
+        })
+      })
+      
   </script>
 </body>
 

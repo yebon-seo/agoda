@@ -568,6 +568,8 @@ color: #333;
 }
 #suit > .wrap .pic img {
   display: block;
+  width: 585px;
+  height: 250px;
 }
 #suit > .wrap .pic > .txt {
   position: absolute;
@@ -590,8 +592,12 @@ color: #333;
   opacity: 1;
   visibility: visible;
 }
-
-
+#suit > .wrap > .pic-container {
+  display: none;
+}
+#suit > .wrap > .con1{
+  display:flex;
+}
 /* 숙소 프로모션 */
 #promotion {
   min-width: 1280px;
