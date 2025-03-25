@@ -83,7 +83,7 @@
   </div>
 
   <!-- 물음표 클릭시 안내 팝업 -->
-   <div id="question-popup">
+  <div id="question-popup">
     <article class="container">
       <div class="qclose">&times;</div>
       <section>
@@ -107,7 +107,7 @@
         <p>&bull; 호텔에 도착 시 객실 요금을 결제해야 합니다. 일부 호텔의 경우, 보증금에서 객실 요금을 공제할 수 있습니다.</p>
       </section>
     </article>
-   </div>
+  </div>
   <!-- header -->
   <div class="notice" id="top-btn">
     <article class="top">
@@ -318,7 +318,7 @@
       <!-- 숙소 목록 -->
       <article class="room-type">
         <!------------ 1번 -------------->
-        <section class="room-type-wrap"> 
+        <section class="room-type-wrap">
           <!-- <div class="room-card"> -->
           <div class="title">
             <h2>수페리어룸</h2>
@@ -888,21 +888,21 @@
   <!----------------------------------->
 
   <script>
-     /*top-btn*/
-     const topBtn = document.querySelector(".top-btn");
-    window.addEventListener("scroll",() => {
+    /*top-btn*/
+    const topBtn = document.querySelector(".top-btn");
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
         topBtn.style.display = "block";
         topBtn.style.opacity = "1";
-      } else if(window.scrollY < 100){
+      } else if (window.scrollY < 100) {
         topBtn.style.opacity = "0"
-      
+
         // topBtn.style.display = "none";
       }
     })
     //탑버튼 클릭시
     topBtn.addEventListener("click", () => {
-      scrollTo({ top: 0, behavior: "smooth"})
+      scrollTo({ top: 0, behavior: "smooth" })
     })
 
     /* 전체메뉴*/
@@ -947,24 +947,24 @@
       })
     )
     /*물음표 버튼 클릭시 안내 팝업창*/
-    
+
     const question = document.querySelector("#question-popup");
     const qBtns = document.querySelectorAll(".qBtn");
     const qclose = document.querySelector(".qclose");
-    
-    qBtns.forEach(qBtn => {
-     qBtn.addEventListener("click",() => {
-      question.style.display ="block"
-      })
-     })
 
-     //닫기 버튼 클릭시
-     qclose.addEventListener("click",() => {
+    qBtns.forEach(qBtn => {
+      qBtn.addEventListener("click", () => {
+        question.style.display = "block"
+      })
+    })
+
+    //닫기 버튼 클릭시
+    qclose.addEventListener("click", () => {
       question.style.display = "none"
-     })
+    })
     /*하트버튼 클릭시 이미지 교체*/
     const hearts = document.querySelectorAll(".pic > .heart");
-     
+
     hearts.forEach(heart => heart.addEventListener("click", () => {
       let pNum = heart.getAttribute("src").substr(-5, 1)
       if (pNum == 1) {
@@ -973,6 +973,25 @@
         heart.setAttribute("src", `images/heart1.png`)
       }
     }))
+
+    /*이미지 클릭시 대표이미지 창으로 변경되는 이벤트*/
+    const pics = document.querySelectorAll(".s-img img");
+    const tImg = document.querySelector(".t-img img");
+
+    pics.forEach(pic => {
+      pic.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        // 클릭한 이미지의 src 저장
+        const imgUrl = pic.getAttribute("src");
+
+        // 현재 대표 이미지의 src를 클릭한 이미지에 적용
+        pic.src = tImg.src;
+
+        // 대표 이미지 변경
+        tImg.src = imgUrl;
+      })
+    })
   </script>
 </body>
 
