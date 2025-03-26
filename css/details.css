@@ -811,9 +811,11 @@
 }
 .r-wrap > .r-container {
   display: flex;
-  width: 300px;
-  outline: 1px solid red;
+  gap: 100px;
   margin-top: 50px;
+}
+.r-wrap > .r-container > .result {
+  width: 300px;
 }
 .r-wrap > .r-container > .result > .title > h2 {
   font-size: 30px;
@@ -824,8 +826,109 @@
 .r-wrap > .r-container > .result > .star {
   display: flex;
   gap: 5px;
+  margin-bottom: 30px;
 }
 .r-wrap > .r-container > .result > .star > img {
-  width: 35px;
-  height: 35px;
+  width: 37px;
+  height: 37px;
+}
+.r-wrap > .r-container > .result > .rating > h1{
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+.r-wrap > .r-container > .result > .rating > h1 > span{
+  font-size: 30px;
+  font-weight: 600;
+  color: #ddd;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar{
+  margin-bottom: 10px;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar > p{
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar > h2{
+  width: 185px;
+  height: 10px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 27px;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar:nth-of-type(1) > h2::after {
+  content: "";
+  display: block;
+  width: 129px;
+  height: 10px;
+  background: #F2B124;
+  border-radius: 20px;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar:nth-of-type(2) > h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 20px;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar:nth-of-type(3) > h2::after {
+  content: "";
+  display: block;
+  width: 37px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 20px;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar:nth-of-type(4) > h2::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 20px;
+}
+.r-wrap > .r-container > .result > .progress-bar-wrap > .progress-bar:nth-of-type(5) > h2::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 20px;
+}
+
+/*오른쪽 리뷰부분*/
+
+.r-wrap > .r-container >  .review-box > .review-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.r-wrap > .r-container >  .review-box > .review-wrap >.review {
+  border: 1px solid #bbb;
+  padding: 20px;
+  border-radius: 10px;
+}
+.r-wrap > .r-container >  .review-box > .review-wrap >.review > h3 {
+  font-weight: 700;
+  color: #F2B124;
+}
+.r-wrap > .r-container >  .review-box > .review-wrap >.review > div {
+  display: flex;
+  justify-content: space-between;
+}
+.r-wrap > .r-container >  .review-box > .review-wrap >.review > div > p {
+  color: #333;
+  padding-top: 20px;
+}
+.r-wrap > .r-container >  .review-box > .review-wrap >.review > div > p:nth-of-type(1) {
+  width: 750px;
+  margin-right: 20px;
+  letter-spacing: 1px;
+}
+.r-wrap > .r-container >  .review-box > .review-wrap >.review > div > p:nth-of-type(2) {
+  font-weight: 500;
+  color: #bbb;
 }

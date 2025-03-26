@@ -879,7 +879,7 @@
 
 
   <!-- ★★★리뷰탭★★★ -->
-  <div class="tab-btn-content1">
+  <div class="tab-btn-content">
     <div class="r-wrap">
       <article class="r-container">
         <section class="result">
@@ -887,10 +887,10 @@
             <h2>더 뉴욕 에디션</h2>
           </div>
           <div class="star">
-            <img src="images/Star1.png" alt="">
             <img src="images/Star2.png" alt="">
-            <img src="images/Star3.png" alt="">
-            <img src="images/Star4.png" alt="">
+            <img src="images/Star2.png" alt="">
+            <img src="images/Star2.png" alt="">
+            <img src="images/Star2.png" alt="">
             <img src="images/Star5.png" alt="">
           </div>
           <div class="rating">
@@ -917,12 +917,86 @@
               <p>너무 별로에요</p>
               <h2></h2>
             </div>
-
           </div>
-
         </section>
-        <section class="review">
 
+        <section class="review-box">
+          <div class="review-wrap">
+            <div class="review">
+              <h3>5/5 매우 훌륭해요</h3>
+              <div>
+                <p>Thousand comments are not worth one staying. The sophisticated and representative hotel of NYC was
+                  literally beautiful and magnificent. And all staffs were kind and professional. Thanks for the care
+                  and friendship provided throughout the stay.</p>
+                <p>25.01.28</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>5/5 매우 훌륭해요</h3>
+              <div>
+                <p>Perfect!</p>
+                <p>25.01.24</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>5/5 매우 훌륭해요</h3>
+              <div>
+                <p>위치 좋고, 조용하고, 깔끔하고, 비즈니스 호텔로는 최상의 선택
+                </p>
+                <p>25.01.20</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>4/5 매우 좋아요</h3>
+              <div>
+                <p>10월9일에서 11월까지 2박3일을 묵었습니다 맨하탄이다보니 아무래도 가격대비 호텔 품질은 떨어질수밖에 없다고 생각됩니다 호텔과 룸의 전체적인 분위기는 있을것만 딱 있는 그런
+                  심플함이 있었고 천쇼파라 그런지 얼룩이 몇군데 보이기도 했습니다. 룸써비스는 자정넘어 한번 요리를 주문해봤는데 20분정도 걸린듯하고 맛은 그럭저럭 괜찮았습니다 단지 전체적으로 좀
+                  짠맛이 있으니 싫어하시는분은 사전에 소금을 줄여달라고 요청하시는게 좋을것입니다. 바로 앞에 유명한 햄버거 가게가 있는것 말곤 근처에 구경거리나 쇼핑시설은 없고 오직 20분정도 걸으시면
+                  중심가가 나오기때문에 관광에 큰 불편은 없을듯 합니다</p>
+                <p>25.01.12</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>1/5 너무 별로에요</h3>
+              <div>
+                <p>This was the worst hotel experience I’ve ever had. As an avid traveler who’s stayed in numerous
+                  five-star hotels around the world, this place barely deserves a single star. The hotel is grossly
+                  overpriced, with terrible staff, non-functioning elevators, poor-quality food, and abysmal service. It
+                  was such a waste—not of money, but of the experience itself. I came here hoping for a relaxing weekend
+                  getaway, but it fell far short of even basic expectations.
+                </p>
+                <p>25.01.02</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>3/5 괜찮아요</h3>
+              <div>
+                <p>For the price I just cannot accept that you don’t get an in room coffee machine. They offer free
+                  coffee
+                  in lobby up to 10:30am, but I hate having to trek down first thing in the morning. Hat to also call to
+                  get shower gel as there were no extras in the room. Check in took 15 mins. Room was ok for the price.
+                  Service was good.</p>
+                <p>24.12.28</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>1/5 너무 별로에요</h3>
+              <div>
+                <p>Robo</p>
+                <p>24.12.25</p>
+              </div>
+            </div>
+            <div class="review">
+              <h3>2/5 너무 별로에요</h3>
+              <div>
+                <p>I have been to the hotel many times / hotel is not very busy in August /I asked for a late check out
+                  until 5 pm and indicated to pay part of the rate - the answer was I need to pay full room rate - my
+                  last
+                  time at this hotel - a Marriott</p>
+                <p>24.12.20</p>
+              </div>
+            </div>
+          </div>
         </section>
       </article>
     </div>
@@ -1082,6 +1156,23 @@
       loginPopup.style.display = "none"
       login.style.display = "block"
     })
+
+    /*탭메뉴 클릭시 각 메뉴가 보여지게 해줘*/
+    const tabMenu = document.querySelectorAll(".tab-btn.on");
+    const content = document.querySelectorAll(".tab-btn-content");
+    tabMenu.forEach((tab, idx) => {
+      tab.addEventListener("click", () => {
+
+        tabMenu.forEach(t => t.classList.remove("active"))
+        tab.classList.add("active");
+        content.forEach(c => c.style.display = "none")
+        content[idx].style.display = "block"
+
+      })
+    })
+
+    tabMenu[0].classList.add("active")
+    content[0].style.display = "block"
   </script>
 </body>
 
