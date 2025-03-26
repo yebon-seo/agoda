@@ -108,6 +108,22 @@
       </section>
     </article>
   </div>
+
+  <!-- 예약하기 클릭시 로그인 팝업창 -->
+  <div id="login-popup">
+    <article class="container">
+      <div class="txt">
+        <p>로그인이 필요한 서비스입니다.<br>
+          로그인 하시겠습니까?
+        </p>
+      </div>
+      <div class="yesorno">
+        <p class="no">취소</p>
+        <p class="yes">확인</p>
+      </div>
+    </article>
+  </div>
+
   <!-- header -->
   <div class="notice" id="top-btn">
     <article class="top">
@@ -186,24 +202,24 @@
 
   <div id="details-main">
     <div class="container">
-      <!-- 타이틀 이미지 영역 -->
-      <article class="img-box">
-        <section class="t-img">
-          <img src="images/t-img.png" alt="대표이미지">
-        </section>
-        <section class="s-img">
-          <img src="images/s-img1.png" alt="대표이미지">
-          <img src="images/s-img2.png" alt="대표이미지">
-          <img src="images/s-img3.png" alt="대표이미지">
-          <img src="images/s-img4.png" alt="대표이미지">
-          <img src="images/s-img5.png" alt="대표이미지">
-          <img src="images/s-img6.png" alt="대표이미지">
-        </section>
-        <section class="btn">
-          <i class="fa-solid fa-angle-left"></i>
-          <i class="fa-solid fa-angle-right"></i>
-        </section>
-      </article>
+      <div class="img-wrap">
+        <!-- 타이틀 이미지 영역 -->
+        <article class="img-box">
+          <section class="t-img">
+            <img src="images/t-img.png" alt="대표이미지">
+          </section>
+          <section class="s-img">
+            <img src="images/s-img1.png" alt="대표이미지">
+            <img src="images/s-img2.png" alt="대표이미지">
+            <img src="images/s-img3.png" alt="대표이미지">
+            <img src="images/s-img4.png" alt="대표이미지">
+            <img src="images/s-img5.png" alt="대표이미지">
+            <img src="images/s-img6.png" alt="대표이미지">
+          </section>
+        </article>
+        <i id="leftbtn" class="fa-solid fa-angle-left"></i>
+        <i id="rightbtn" class="fa-solid fa-angle-right"></i>
+      </div>
 
       <!-- 타이틀 정보 -->
       <article class="hotel-title">
@@ -272,11 +288,13 @@
       <!-- 탭 컨텐츠 -->
       <article class="tab-item">
         <div class="btn">
-          <button class="tab-btn active">객실요금</button>
-          <button class="tab-btn">리뷰</button>
+          <button class="tab-btn on active">객실요금</button>
+          <button class="tab-btn on">리뷰</button>
           <button class="tab-btn">시설 및 서비스</button>
           <button class="tab-btn">호텔정보</button>
         </div>
+      </article>
+      <div class="tab-btn-content">
         <div class="content">
           <div class="title">
             <img src="images/i.png" alt="안내">
@@ -291,574 +309,624 @@
             </p>
           </div>
         </div>
-      </article>
 
-      <!-- 필터 탭 -->
-      <article class="filter-tab">
-        <section class="filter-wrap">
-          <div class="filter">
-            <img src="images/spoon.png" alt="식사">
-            <p>식사포함</p>
-          </div>
-          <div class="filter">
-            <img src="images/time.png" alt="식사">
-            <p>예약무료취소</p>
-          </div>
-          <div class="filter">
-            <img src="images/pay.png" alt="식사">
-            <p>현지 지불요금 제외</p>
-          </div>
-          <div class="filter">
-            <img src="images/smoke.png" alt="식사">
-            <p>금연객실</p>
-          </div>
-        </section>
-      </article>
+        <!-- 필터 탭 -->
+        <article class="filter-tab">
+          <section class="filter-wrap">
+            <div class="filter">
+              <img src="images/spoon.png" alt="식사">
+              <p>식사포함</p>
+            </div>
+            <div class="filter">
+              <img src="images/time.png" alt="식사">
+              <p>예약무료취소</p>
+            </div>
+            <div class="filter">
+              <img src="images/pay.png" alt="식사">
+              <p>현지 지불요금 제외</p>
+            </div>
+            <div class="filter">
+              <img src="images/smoke.png" alt="식사">
+              <p>금연객실</p>
+            </div>
+          </section>
+        </article>
 
-      <!-- 숙소 목록 -->
-      <article class="room-type">
-        <!------------ 1번 -------------->
-        <section class="room-type-wrap">
-          <!-- <div class="room-card"> -->
-          <div class="title">
-            <h2>수페리어룸</h2>
-          </div>
-          <div class="cardinfo">
-            <section class="card-left">
-              <div class="pic">
-                <img class="full" src="images/d-timg.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-              </div>
-              <div class="info-wrap">
-                <div class="info">
-                  <img src="images/queen.png" alt="">
-                  <p>퀸침대 1개</p>
+        <!-- 숙소 목록 -->
+        <article class="room-type">
+          <!------------ 1번 -------------->
+          <section class="room-type-wrap">
+            <!-- <div class="room-card"> -->
+            <div class="title">
+              <h2>수페리어룸</h2>
+            </div>
+            <div class="cardinfo">
+              <section class="card-left">
+                <div class="pic">
+                  <img class="full" src="images/d-timg.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
                 </div>
-                <div class="info">
-                  <img src="images/smoke2.png" alt="">
-                  <p>금연</p>
+                <div class="info-wrap">
+                  <div class="info">
+                    <img src="images/queen.png" alt="">
+                    <p>퀸침대 1개</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/smoke2.png" alt="">
+                    <p>금연</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/space.png" alt="">
+                    <p>21㎡</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/wifi.png" alt="">
+                    <p>무료 Wi-Fi</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/bath.png" alt="">
+                    <p>개인욕실</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/aircon.png" alt="">
+                    <p>에어컨</p>
+                  </div>
+                  <div class="info">
+                    <p>객실정보</p>
+                  </div>
                 </div>
-                <div class="info">
-                  <img src="images/space.png" alt="">
-                  <p>21㎡</p>
+              </section>
+              <!-- 호텔 타입목록 중 오른쪽 정보 -->
+              <section class="card-right">
+                <div class="d-title-info">
+                  <h2>객실 옵션 상세</h2>
+                  <h3>정원</h3>
+                  <h4>오늘의 요금</h4>
                 </div>
-                <div class="info">
-                  <img src="images/wifi.png" alt="">
-                  <p>무료 Wi-Fi</p>
-                </div>
-                <div class="info">
-                  <img src="images/bath.png" alt="">
-                  <p>개인욕실</p>
-                </div>
-                <div class="info">
-                  <img src="images/aircon.png" alt="">
-                  <p>에어컨</p>
-                </div>
-                <div class="info">
-                  <p>객실정보</p>
-                </div>
-              </div>
-            </section>
-            <!-- 호텔 타입목록 중 오른쪽 정보 -->
-            <section class="card-right">
-              <div class="d-title-info">
-                <h2>객실 옵션 상세</h2>
-                <h3>정원</h3>
-                <h4>오늘의 요금</h4>
-              </div>
-              <div class="d-wrap">
+                <div class="d-wrap">
 
-                <!-- 객실옵션상세 -->
-                <div class="d-info">
-                  <div>
-                    <!-- 조건중 가장 저렴 -->
-                    <div class="abs">
-                      <p><span>무료취소 </span>조건 중 가장 저렴</p>
+                  <!-- 객실옵션상세 -->
+                  <div class="d-info">
+                    <div>
+                      <!-- 조건중 가장 저렴 -->
+                      <div class="abs">
+                        <p><span>무료취소 </span>조건 중 가장 저렴</p>
+                      </div>
+
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
                     </div>
-
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;2</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2><del>286,295</del> 241,973원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                  <div class="sale">
-                    <p>특별할인</p>
-                    <p class="bgpink">15% 할인</p>
-                  </div>
-                </div>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <!-- 조건중 가장 저렴 -->
-                    <div class="abs">
-                      <p><span>무료취소 </span>조건 중 가장 저렴</p>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
                     </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
 
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;2</p>
                   </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
 
+                  <div class="price">
+                    <div>
+                      <h2><del>286,295</del> 241,973원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                    <div class="sale">
+                      <p>특별할인</p>
+                      <p class="bgpink">15% 할인</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <!-- 조건중 가장 저렴 -->
+                      <div class="abs">
+                        <p><span>무료취소 </span>조건 중 가장 저렴</p>
+                      </div>
 
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;2</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2><del>350,147</del> 295,968원</h2>
-                    <p>세금&서비스비용포함</p>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                  <div class="sale">
-                    <p>특별할인</p>
-                    <p class="bgpink">15% 할인</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          </div>
-          <!-- </div> -->
-        </section>
-
-
-        <!------------ 2번 -------------->
-        <section class="room-type-wrap">
-          <!-- <div class="room-card"> -->
-          <div class="title">
-            <h2>디럭스룸</h2>
-          </div>
-          <div class="cardinfo">
-            <section class="card-left">
-              <div class="pic">
-                <img class="full" src="images/d-timg.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-              </div>
-              <div class="info-wrap">
-                <div class="info">
-                  <img src="images/queen.png" alt="">
-                  <p>퀸침대 1개</p>
-                </div>
-                <div class="info">
-                  <img src="images/smoke2.png" alt="">
-                  <p>금연</p>
-                </div>
-                <div class="info">
-                  <img src="images/space.png" alt="">
-                  <p>27㎡</p>
-                </div>
-                <div class="info">
-                  <img src="images/wifi.png" alt="">
-                  <p>무료 Wi-Fi</p>
-                </div>
-                <div class="info">
-                  <img src="images/bath.png" alt="">
-                  <p>개인욕실</p>
-                </div>
-                <div class="info">
-                  <img src="images/aircon.png" alt="">
-                  <p>에어컨</p>
-                </div>
-                <div class="info">
-                  <p>객실정보</p>
-                </div>
-              </div>
-            </section>
-            <!-- 호텔 타입목록 중 오른쪽 정보 -->
-            <section class="card-right">
-              <div class="d-title-info">
-                <h2>객실 옵션 상세</h2>
-                <h3>정원</h3>
-                <h4>오늘의 요금</h4>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;2</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2>351,823원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;2</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2>367,525원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <!-- </div> -->
-        </section>
-
-        <!------------ 3번 -------------->
-        <section class="room-type-wrap">
-          <!-- <div class="room-card"> -->
-          <div class="title">
-            <h2>로프트 스튜디오</h2>
-          </div>
-          <div class="cardinfo">
-            <section class="card-left">
-              <div class="pic">
-                <img class="full" src="images/d-timg.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-              </div>
-              <div class="info-wrap">
-                <div class="info">
-                  <img src="images/queen.png" alt="">
-                  <p>킹침대 1개</p>
-                </div>
-                <div class="info">
-                  <img src="images/smoke2.png" alt="">
-                  <p>금연</p>
-                </div>
-                <div class="info">
-                  <img src="images/space.png" alt="">
-                  <p>34㎡</p>
-                </div>
-                <div class="info">
-                  <img src="images/wifi.png" alt="">
-                  <p>무료 Wi-Fi</p>
-                </div>
-                <div class="info">
-                  <img src="images/bath.png" alt="">
-                  <p>개인욕실</p>
-                </div>
-                <div class="info">
-                  <img src="images/aircon.png" alt="">
-                  <p>에어컨</p>
-                </div>
-                <div class="info">
-                  <p>객실정보</p>
-                </div>
-              </div>
-            </section>
-            <!-- 호텔 타입목록 중 오른쪽 정보 -->
-            <section class="card-right">
-              <div class="d-title-info">
-                <h2>객실 옵션 상세</h2>
-                <h3>정원</h3>
-                <h4>오늘의 요금</h4>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;3</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2>567,451원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;3</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2>598,356원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <!-- </div> -->
-        </section>
-
-        <!------------ 4번 -------------->
-        <section class="room-type-wrap">
-          <!-- <div class="room-card"> -->
-          <div class="title">
-            <h2>패밀리 스위트</h2>
-          </div>
-          <div class="cardinfo">
-            <section class="card-left">
-              <div class="pic">
-                <img class="full" src="images/d-timg.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-                <img src="images/d-timgs1.png" alt="">
-              </div>
-              <div class="info-wrap">
-                <div class="info">
-                  <img src="images/queen.png" alt="">
-                  <p>킹침대 2개</p>
-                </div>
-                <div class="info">
-                  <img src="images/smoke2.png" alt="">
-                  <p>금연</p>
-                </div>
-                <div class="info">
-                  <img src="images/space.png" alt="">
-                  <p>47㎡</p>
-                </div>
-                <div class="info">
-                  <img src="images/wifi.png" alt="">
-                  <p>무료 Wi-Fi</p>
-                </div>
-                <div class="info">
-                  <img src="images/bath.png" alt="">
-                  <p>개인욕실</p>
-                </div>
-                <div class="info">
-                  <img src="images/aircon.png" alt="">
-                  <p>에어컨</p>
-                </div>
-                <div class="info">
-                  <p>객실정보</p>
-                </div>
-              </div>
-            </section>
-            <!-- 호텔 타입목록 중 오른쪽 정보 -->
-            <section class="card-right">
-              <div class="d-title-info">
-                <h2>객실 옵션 상세</h2>
-                <h3>정원</h3>
-                <h4>오늘의 요금</h4>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;5</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2>1,023,575원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-wrap">
-                <div class="d-info">
-                  <div>
-                    <img src="images/donotlunch.png" alt="">
-                    <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
-                    <span class="qBtn"><img src="images/question.png" alt=""></span>
-                  </div>
-                  <div>
-                    <img src="images/cancle.png" alt="">
-                    <p><span>무료 취소</span> 3월 4일 23:59 전</p>
-                  </div>
-                  <div>
-                    <img src="images/thunder.png" alt="">
-                    <p><span>대기없이 바로확정!</span></p>
-                  </div>
-                  <div>
-                    <img src="images/pay2.png" alt="">
-                    <p>온라인 사전 결제</p>
-                  </div>
-                </div>
-
-                <div class="people">
-                  <img src="images/user2.png" alt="">
-                  <p> &#215;5</p>
-                </div>
-
-                <div class="price">
-                  <div>
-                    <h2>1,054,563원</h2>
-                    <p>세금&서비스비용포함</p>
-                  </div>
-                  <div>
-                    <h3>예약하기</h3>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <!-- </div> -->
-        </section>
-
-      </article>
 
 
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;2</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2><del>350,147</del> 295,968원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                    <div class="sale">
+                      <p>특별할인</p>
+                      <p class="bgpink">15% 할인</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+            <!-- </div> -->
+          </section>
+
+
+          <!------------ 2번 -------------->
+          <section class="room-type-wrap">
+            <!-- <div class="room-card"> -->
+            <div class="title">
+              <h2>디럭스룸</h2>
+            </div>
+            <div class="cardinfo">
+              <section class="card-left">
+                <div class="pic">
+                  <img class="full" src="images/d-timg.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                </div>
+                <div class="info-wrap">
+                  <div class="info">
+                    <img src="images/queen.png" alt="">
+                    <p>퀸침대 1개</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/smoke2.png" alt="">
+                    <p>금연</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/space.png" alt="">
+                    <p>27㎡</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/wifi.png" alt="">
+                    <p>무료 Wi-Fi</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/bath.png" alt="">
+                    <p>개인욕실</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/aircon.png" alt="">
+                    <p>에어컨</p>
+                  </div>
+                  <div class="info">
+                    <p>객실정보</p>
+                  </div>
+                </div>
+              </section>
+              <!-- 호텔 타입목록 중 오른쪽 정보 -->
+              <section class="card-right">
+                <div class="d-title-info">
+                  <h2>객실 옵션 상세</h2>
+                  <h3>정원</h3>
+                  <h4>오늘의 요금</h4>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
+
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;2</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2>351,823원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
+
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;2</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2>367,525원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!-- </div> -->
+          </section>
+
+          <!------------ 3번 -------------->
+          <section class="room-type-wrap">
+            <!-- <div class="room-card"> -->
+            <div class="title">
+              <h2>로프트 스튜디오</h2>
+            </div>
+            <div class="cardinfo">
+              <section class="card-left">
+                <div class="pic">
+                  <img class="full" src="images/d-timg.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                </div>
+                <div class="info-wrap">
+                  <div class="info">
+                    <img src="images/queen.png" alt="">
+                    <p>킹침대 1개</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/smoke2.png" alt="">
+                    <p>금연</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/space.png" alt="">
+                    <p>34㎡</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/wifi.png" alt="">
+                    <p>무료 Wi-Fi</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/bath.png" alt="">
+                    <p>개인욕실</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/aircon.png" alt="">
+                    <p>에어컨</p>
+                  </div>
+                  <div class="info">
+                    <p>객실정보</p>
+                  </div>
+                </div>
+              </section>
+              <!-- 호텔 타입목록 중 오른쪽 정보 -->
+              <section class="card-right">
+                <div class="d-title-info">
+                  <h2>객실 옵션 상세</h2>
+                  <h3>정원</h3>
+                  <h4>오늘의 요금</h4>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
+
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;3</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2>567,451원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
+
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;3</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2>598,356원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!-- </div> -->
+          </section>
+
+          <!------------ 4번 -------------->
+          <section class="room-type-wrap">
+            <!-- <div class="room-card"> -->
+            <div class="title">
+              <h2>패밀리 스위트</h2>
+            </div>
+            <div class="cardinfo">
+              <section class="card-left">
+                <div class="pic">
+                  <img class="full" src="images/d-timg.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                  <img src="images/d-timgs1.png" alt="">
+                </div>
+                <div class="info-wrap">
+                  <div class="info">
+                    <img src="images/queen.png" alt="">
+                    <p>킹침대 2개</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/smoke2.png" alt="">
+                    <p>금연</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/space.png" alt="">
+                    <p>47㎡</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/wifi.png" alt="">
+                    <p>무료 Wi-Fi</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/bath.png" alt="">
+                    <p>개인욕실</p>
+                  </div>
+                  <div class="info">
+                    <img src="images/aircon.png" alt="">
+                    <p>에어컨</p>
+                  </div>
+                  <div class="info">
+                    <p>객실정보</p>
+                  </div>
+                </div>
+              </section>
+              <!-- 호텔 타입목록 중 오른쪽 정보 -->
+              <section class="card-right">
+                <div class="d-title-info">
+                  <h2>객실 옵션 상세</h2>
+                  <h3>정원</h3>
+                  <h4>오늘의 요금</h4>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
+
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;5</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2>1,023,575원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-wrap">
+                  <div class="d-info">
+                    <div>
+                      <img src="images/donotlunch.png" alt="">
+                      <p>높은 퀄리티의 조식 (29,044원, 선택)</p>
+                      <span class="qBtn"><img src="images/question.png" alt=""></span>
+                    </div>
+                    <div>
+                      <img src="images/cancle.png" alt="">
+                      <p><span>무료 취소</span> 3월 4일 23:59 전</p>
+                    </div>
+                    <div>
+                      <img src="images/thunder.png" alt="">
+                      <p><span>대기없이 바로확정!</span></p>
+                    </div>
+                    <div>
+                      <img src="images/pay2.png" alt="">
+                      <p>온라인 사전 결제</p>
+                    </div>
+                  </div>
+
+                  <div class="people">
+                    <img src="images/user2.png" alt="">
+                    <p> &#215;5</p>
+                  </div>
+
+                  <div class="price">
+                    <div>
+                      <h2>1,054,563원</h2>
+                      <p>세금&서비스비용포함</p>
+                    </div>
+                    <div>
+                      <h3>예약하기</h3>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!-- </div> -->
+          </section>
+
+        </article>
 
 
 
 
 
+
+
+      </div>
     </div>
   </div>
 
+
+  <!-- ★★★리뷰탭★★★ -->
+  <div class="tab-btn-content1">
+    <div class="r-wrap">
+      <article class="r-container">
+        <section class="result">
+          <div class="title">
+            <h2>더 뉴욕 에디션</h2>
+          </div>
+          <div class="star">
+            <img src="images/Star1.png" alt="">
+            <img src="images/Star2.png" alt="">
+            <img src="images/Star3.png" alt="">
+            <img src="images/Star4.png" alt="">
+            <img src="images/Star5.png" alt="">
+          </div>
+          <div class="rating">
+            <h1>4.2 / <span>5</span></h1>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar">
+              <p>매우 훌륭해요</p>
+              <h2></h2>
+            </div>
+            <div class="progress-bar">
+              <p>매우 좋아요</p>
+              <h2></h2>
+            </div>
+            <div class="progress-bar">
+              <p>괜찮아요</p>
+              <h2></h2>
+            </div>
+            <div class="progress-bar">
+              <p>별로에요</p>
+              <h2></h2>
+            </div>
+            <div class="progress-bar">
+              <p>너무 별로에요</p>
+              <h2></h2>
+            </div>
+
+          </div>
+
+        </section>
+        <section class="review">
+
+        </section>
+      </article>
+    </div>
+  </div>
 
   <!-- footer ------------------------->
   <div id="footer">
@@ -991,6 +1059,28 @@
         // 대표 이미지 변경
         tImg.src = imgUrl;
       })
+    })
+
+    /*예약하기 버튼 클릭시 로그인 팝업창*/
+    const loginPopup = document.querySelector("#login-popup");
+    const bookBtn = document.querySelectorAll(".price h3");
+    const no = document.querySelector(".no");
+    const yes = document.querySelector(".yes");
+
+    bookBtn.forEach(item => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginPopup.style.display = "block"
+        // console.log("예약하기 버튼 클릭됨!");
+      })
+    })
+
+    no.addEventListener("click", () => {
+      loginPopup.style.display = "none"
+    })
+    yes.addEventListener("click", () => {
+      loginPopup.style.display = "none"
+      login.style.display = "block"
     })
   </script>
 </body>
