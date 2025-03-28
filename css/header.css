@@ -1,13 +1,23 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 html {
- scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 /*리셋*/
-*{margin: 0;padding: 0;box-sizing: border-box;}
-ul{list-style: none;}
-a{text-decoration: none;}
-body {font-family: "pretendard";}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "pretendard";
+}
 
 /* font-weight */
 /* bold 700/semi-bold 600/medium 500/regular 400 */
@@ -15,18 +25,18 @@ body {font-family: "pretendard";}
 /*header*/
 
 /*공지사항 TOP*/
-.notice{
-    background-color: #0283df;
-    line-height: 50px;
+.notice {
+  background-color: #0283df;
+  line-height: 50px;
 }
-.notice > .top{
-    width: 1190px;
-    margin: auto;
+.notice > .top {
+  width: 1190px;
+  margin: auto;
 }
-.notice > .top > p{
-    text-align: center;
-    color: #fff;
-    font-weight: 700; 
+.notice > .top > p {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
 }
 
 header {
@@ -34,177 +44,173 @@ header {
   border-bottom: 1px solid #bbb;
 }
 header > .container {
-    width: 1280px;
-    padding: 0 45px; /*안쪽 여백*/
-    margin: auto;
+  width: 1280px;
+  padding: 0 45px; /*안쪽 여백*/
+  margin: auto;
 }
 
-header > .container > .search-container{
-    display: flex;
+header > .container > .search-container {
+  display: flex;
 }
 header > .container > .search-container > a {
-    display: block;
+  display: block;
 }
-header > .container > .search-container > a > img{
-    width: 97px;
-    height: 50px;
-    margin: 10px auto 10px 0;
+header > .container > .search-container > a > img {
+  width: 97px;
+  height: 50px;
+  margin: 10px auto 10px 0;
 }
-header > .container >.search-container > input {
-    width: 486px;
-    height: 50px;
-    margin: 10px auto 10px 90px;
-    padding-left: 14px;
-    padding-right: 40px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    background: #f1f1f1 url('../images/search.png') no-repeat;
-    background-position: right 14px center;
-    background-size: 24px 19px 
+header > .container > .search-container > input {
+  width: 486px;
+  height: 50px;
+  margin: 10px auto 10px 90px;
+  padding-left: 14px;
+  padding-right: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: #f1f1f1 url("../images/search.png") no-repeat;
+  background-position: right 14px center;
+  background-size: 24px 19px;
 }
-header > .container >.search-container > ul {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    align-items: center;
+header > .container > .search-container > ul {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
 }
-header > .container > .search-container > ul >li{
-    text-align: center;
+header > .container > .search-container > ul > li {
+  text-align: center;
 }
-header > .container > .search-container > ul a{
-    display: flex;
-    gap:4px;
-    flex-direction: column;
-    font-size: 12px;
-    color: #555;
+header > .container > .search-container > ul a {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  font-size: 12px;
+  color: #555;
 }
 header > .container > .search-container > ul img {
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-    display: block;
-    margin: auto;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
 }
-header >.container > .gnb {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: 1;
-    flex-direction: row;
+header > .container > .gnb {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: 1;
+  flex-direction: row;
 }
-header >.container > .gnb a {
-    line-height: 70px;
-    color: #333;
-    font-weight: 600;
+header > .container > .gnb a {
+  line-height: 70px;
+  color: #333;
+  font-weight: 600;
 }
-header >.container > .gnb > .left-tab > ul{
-    display: flex;
-    gap: 36px;
-    align-items: center;
-    justify-content: left;
+header > .container > .gnb > .left-tab > ul {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: left;
 }
-header >.container > .gnb > .right-tab > ul{
-    display: flex;
-    gap: 36px;
-    align-items: center;
-    justify-content: right;
+header > .container > .gnb > .right-tab > ul {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: right;
 }
-header >.container > .gnb > ul >.menu {
-    cursor: pointer;
+header > .container > .gnb > ul > .menu {
+  cursor: pointer;
 }
 
 /*메가메뉴 css*/
 .menu > .mega {
-    width: 100%;
-    max-width: 1190px;
-    /* height: 194px; */
-    padding: 40px 95px;
-    display: flex;
-    gap: 80px;
-    margin: auto;
-    background-color: #ffffff;
-    outline: 1px solid #ccc; 
-    border-radius: 0 0 20px 20px;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 71px;
-    z-index: 10;
-    transition: opacity 0.3s;
+  width: 100%;
+  max-width: 1190px;
+  /* height: 194px; */
+  padding: 40px 95px;
+  display: flex;
+  gap: 80px;
+  margin: auto;
+  background-color: #ffffff;
+  outline: 1px solid #ccc;
+  border-radius: 0 0 20px 20px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 71px;
+  z-index: 10;
+  transition: opacity 0.3s;
 }
-.menu > .mega > .sub h2{
-    font-weight: 700;
-    color: #0283df;
-    font-size: 18px;
+.menu > .mega > .sub h2 {
+  font-weight: 700;
+  color: #0283df;
+  font-size: 18px;
 }
 .menu > .mega > .sub > hr {
-    border: 1px solid #0283df;
-    border-radius: 20px;
-    width: 280px;
-    margin-top: 5px;
-    margin-bottom: 30px;
+  border: 1px solid #0283df;
+  border-radius: 20px;
+  width: 280px;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 .menu > .mega > .sub > ul {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between; /* 항목 간격 균등 */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between; /* 항목 간격 균등 */
 }
-.menu > .mega > .sub a{
-    color: #333;
-    font-size: 16px;
-    display: block;
-    width: 110px;
-    min-width: 100px; /* 최소 크기 유지 */
-    line-height: 30px;
+.menu > .mega > .sub a {
+  color: #333;
+  font-size: 16px;
+  display: block;
+  width: 110px;
+  min-width: 100px; /* 최소 크기 유지 */
+  line-height: 30px;
 }
 /*hover시 이벤트*/
-.menu > .mega > .sub a:hover{
-    font-weight: 800;
+.menu > .mega > .sub a:hover {
+  font-weight: 800;
 }
 header > .container > .gnb > ul > li > a,
 header > .container > .gnb .right-tab > li > a {
-    display: block;
-    line-height: 70px;
-    color: #333;
-    font-size: 16px;
-    font-weight: 600; 
+  display: block;
+  line-height: 70px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
 }
 header > .container > .gnb li img {
-    width: 33px;
-    height: 25px;
-    object-fit: cover;
-    display: block;
-    cursor: pointer;
+  width: 33px;
+  height: 25px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
 }
 header > .container > .gnb > ul .right-tab {
-    margin-left: auto; /*오른쪽 정렬*/
-    display: flex;
-    gap:36px
+  margin-left: auto; /*오른쪽 정렬*/
+  display: flex;
+  gap: 36px;
 }
 
 .mega.open {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  /* visibility: hidden; */
+  transition: all 0.3s;
+}
 
-
-
-
-.top-btn{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    opacity: 0;
-    /* visibility: hidden; */
-    transition: all 0.3s;
-   }
-   
 @media (max-width: 1400px) {
-    .menu > .mega {
-        gap: 40px; /* 작은 화면에서는 간격 축소 */
-    }
+  .menu > .mega {
+    gap: 40px; /* 작은 화면에서는 간격 축소 */
+  }
 }

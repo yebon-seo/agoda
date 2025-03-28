@@ -1,4 +1,4 @@
-main{
+main {
   min-width: 1280px;
 }
 main > .container {
@@ -19,14 +19,13 @@ main > .container > #banner > .auto-slide {
   width: 1280px;
   padding: 0 45px;
   margin: auto;
-  
 }
 #banner > .auto-slide > .slide {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
-#banner > .auto-slide > .slide.show{
+#banner > .auto-slide > .slide.show {
   opacity: 1;
   visibility: visible;
 }
@@ -35,7 +34,7 @@ main > .container > #banner > .auto-slide {
   height: 750px;
   object-fit: cover;
   position: absolute;
-  left: calc(50% - 900px); 
+  left: calc(50% - 900px);
   top: 195px;
   transition: 0.5s;
 }
@@ -92,13 +91,12 @@ main > .container > #banner > .auto-slide {
 }
 
 /*전체 배경 그라디언트*/
-#bg-gradient{
+#bg-gradient {
   width: 100%;
   position: absolute;
   z-index: -10;
-  background: linear-gradient(0deg,#D6F1FF,#fff);
+  background: linear-gradient(0deg, #d6f1ff, #fff);
 }
-
 
 /*select-box*/
 #select-box {
@@ -107,14 +105,12 @@ main > .container > #banner > .auto-slide {
   background-color: #fff;
   border-radius: 20px;
   padding: 60px 44px;
-  box-shadow: 0 4px 10px rgb(51, 51, 51,0.1);
+  box-shadow: 0 4px 10px rgb(51, 51, 51, 0.1);
   position: absolute;
   /* bottom: -129px; */
   left: 50%;
   transform: translateX(-50%);
   top: calc(600px + 129px); /* 이미지 높이 + 129px 아래 */
-
-
 }
 #select-box .hotel {
   height: 70%;
@@ -122,11 +118,11 @@ main > .container > #banner > .auto-slide {
   align-items: center;
 }
 #select-box .hotel .title {
- align-self: start;
- margin-top: 10px;
+  align-self: start;
+  margin-top: 10px;
 }
 #select-box .hotel .title h2,
-#select-box .recent h2{
+#select-box .recent h2 {
   font-size: 20px;
   font-weight: 700;
   color: #333;
@@ -138,7 +134,7 @@ main > .container > #banner > .auto-slide {
   margin: 0 37px;
 }
 
-#select-box .hotel .select div.country input{
+#select-box .hotel .select div.country input {
   width: 265px;
   height: 126px;
   text-align: center;
@@ -146,7 +142,7 @@ main > .container > #banner > .auto-slide {
   border: 1px solid #ccc;
   outline: none;
 }
-#select-box .hotel .select div.country input::placeholder{
+#select-box .hotel .select div.country input::placeholder {
   color: #bbb;
   font-weight: bold;
 }
@@ -167,16 +163,16 @@ main > .container > #banner > .auto-slide {
   outline: none;
   padding: 20px;
   color: #bbb;
-} 
+}
 #select-box .hotel .select .check-con .check > span {
   width: 100px;
 }
-#select-box .hotel .select div:nth-of-type(2) .check input{
+#select-box .hotel .select div:nth-of-type(2) .check input {
   border: none;
   color: #555;
 }
 #select-box .hotel .select div:nth-of-type(3),
-#select-box .hotel .select div:nth-of-type(4){
+#select-box .hotel .select div:nth-of-type(4) {
   width: 105px;
   height: 125px;
   border: 1px solid #ccc;
@@ -202,13 +198,12 @@ main > .container > #banner > .auto-slide {
   background-color: #1aac5b;
   border-radius: 20px;
 }
-#select-box .hotel .btn a{
+#select-box .hotel .btn a {
   display: block;
   line-height: 42px;
   color: #fff;
   text-align: center;
   font-weight: 700;
-
 }
 #select-box .recent {
   height: 30%;
@@ -228,11 +223,19 @@ main > .container > #banner > .auto-slide {
   min-width: 1280px;
   height: 855px;
 }
-#card-box .wrap{
+#card-box .wrap {
   width: 1280px;
   padding: 0 45px;
   margin: auto;
   padding-top: 269px;
+  overflow: hidden;
+}
+#card-box > .wrap > section {
+  width: 940px;
+  height: 586px;
+  margin: auto;
+  /* outline: 1px solid red; */
+  overflow: hidden;
 }
 #card-box > .wrap > section > h2 {
   text-align: center;
@@ -240,18 +243,21 @@ main > .container > #banner > .auto-slide {
   font-weight: 600;
   color: #0283df;
   margin-bottom: 30px;
-} 
+}
 #card-box > .wrap > section > h2 > span {
   color: #333;
 }
 #card-box > .wrap > section > div {
   display: flex;
   justify-content: center;
-  gap:20px;
+  gap: 20px;
   position: relative;
+  width: 1900px;
+  height: 586px;
 }
 #card-box > .wrap > section > div > .card {
   /* border: 1px solid #c3c3c3; */
+  /* overflow: hidden; */
   border-radius: 20px;
   width: 300px;
   height: 500px;
@@ -262,9 +268,9 @@ main > .container > #banner > .auto-slide {
 #card-box > .wrap > section > div > .card:hover {
   cursor: pointer;
 }
-/*------------*/
+/*------------------------------------------------*/
 
-#card-box > .wrap > section > div > .card img{
+#card-box > .wrap > section > div > .card img {
   width: 100%;
   object-fit: cover;
   display: block;
@@ -305,14 +311,16 @@ main > .container > #banner > .auto-slide {
 }
 
 /*좌우버튼*/
-#card-box > .wrap > section > div > .btn {
-  width: 1190px;
+#card-box > .wrap > section > .btn {
+  width: 60%;
   margin: auto;
   position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+  top: 20%;
+  left: 50%;
+  transform: translate(50%, -60%);
+  /* left: -20px; */
 }
-#card-box > .wrap > section > div > .btn > button{
+#card-box > .wrap > section > .btn > button {
   background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -320,28 +328,27 @@ main > .container > #banner > .auto-slide {
   cursor: pointer;
   position: absolute;
 }
-#card-box > .wrap > section > div > .btn > button:hover {
+#card-box > .wrap > section > .btn > button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-#card-box > .wrap > section > div > .btn > button > img {
+#card-box > .wrap > section > .btn > button > img {
   width: 50px;
   height: 50px;
   display: flex;
 }
-#card-box > .wrap > section > div > .btn > button:nth-of-type(1){
-  left: 0; 
+#card-box > .wrap > section > .btn > button:nth-of-type(1) {
+  left: 0;
 }
-#card-box > .wrap > section > div > .btn > button:nth-of-type(2) {
-  right: 0; 
+#card-box > .wrap > section > .btn > button:nth-of-type(2) {
+  right: 0;
 }
-
 
 /*아고다 추천숙소*/
 #recommend {
   min-width: 1280px;
   margin-top: 140px;
 }
-#recommend .wrap{
+#recommend .wrap {
   width: 1280px;
   height: 570px;
   margin: auto;
@@ -354,7 +361,7 @@ main > .container > #banner > .auto-slide {
   text-align: center;
   margin-bottom: 30px;
 }
-#recommend > .wrap > section > h2 >span {
+#recommend > .wrap > section > h2 > span {
   color: #0283df;
 }
 #recommend > .wrap > section > .card-wrap {
@@ -364,9 +371,10 @@ main > .container > #banner > .auto-slide {
   position: relative;
 }
 
-#recommend > .wrap > section > .card-wrap > .card{
+#recommend > .wrap > section > .card-wrap > .card {
   background-color: #fff;
-  width: 460px; height: 460px;
+  width: 460px;
+  height: 460px;
   box-shadow: 0 4px 4px rgba(51, 51, 51, 0.25);
   border-radius: 20px;
 }
@@ -389,7 +397,7 @@ main > .container > #banner > .auto-slide {
   font-weight: 500;
   color: #0283df;
   padding-bottom: 49px;
-} 
+}
 #recommend > .wrap > section > .card-wrap > .card > .txt > p {
   font-size: 18px;
   font-weight: 500;
@@ -410,7 +418,7 @@ main > .container > #banner > .auto-slide {
   font-weight: 700;
   text-align: right;
 }
-#recommend > .wrap > section > .card-wrap > .card > .txt >h3 span {
+#recommend > .wrap > section > .card-wrap > .card > .txt > h3 span {
   font-weight: normal;
 }
 /*좌우버튼*/
@@ -421,7 +429,7 @@ main > .container > #banner > .auto-slide {
   top: 50%;
   transform: translateY(-50%);
 }
-#recommend > .wrap > section > .card-wrap > .btn > button{
+#recommend > .wrap > section > .card-wrap > .btn > button {
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: transparent;
@@ -436,16 +444,15 @@ main > .container > #banner > .auto-slide {
 #recommend > .wrap > section > .card-wrap > .btn > button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-#recommend > .wrap > section > .card-wrap > .btn > button:nth-of-type(1){
-  left: 0; 
+#recommend > .wrap > section > .card-wrap > .btn > button:nth-of-type(1) {
+  left: 0;
 }
 #recommend > .wrap > section > .card-wrap > .btn > button:nth-of-type(2) {
-  right: 0; 
+  right: 0;
 }
 
-
 /*광고배너*/
-#ad-banner { 
+#ad-banner {
   min-width: 1280px;
   height: 300px;
   margin-top: 140px;
@@ -475,77 +482,122 @@ main > .container > #banner > .auto-slide {
   text-decoration: underline;
 }
 
-
 /*해외 인기 여행지*/
 #popular {
   min-width: 1280px;
   margin-top: 140px;
 }
+
 #popular > .wrap {
   width: 1190px;
   /* padding: 0 45px; */
   margin: auto;
   overflow: hidden;
 }
+
 #popular > .wrap > section > h2 {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 30px;
 }
+
 #popular > .wrap > section > h2 span {
   color: #0283df;
 }
-#popular > .wrap > section > .list-wrap {
-  display: flex;
-  gap:20px;
-  justify-content: center;
-  align-items:center;  
-}
-#popular > .wrap > section > .list-wrap > .list{
- cursor: pointer;
- transition: 0.3s;
- border-radius: 10px;
-}
-/*hover시 이벤트*/
-#popular > .wrap > section > .list-wrap > .list:hover{
-  transform: scale(1.2);
- }
 
-#popular > .wrap > section > .list-wrap > .list > p {
-text-align: center;
-margin-top: 15px;
-font-size: 20px;
-color: #333;
+#popular > .wrap > section > .swiper-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
 }
-#popular > .wrap > section > .list-wrap > .list > .sub-txt {
+
+#popular > .wrap > section > .swiper-wrapper .swiper-slide {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+
+  width: 22%;
+  position: relative;
+  margin-bottom: 30px; /* 이미지와 텍스트 사이의 간격 */
+  opacity: 1;
+}
+
+/* hover 시 이벤트 */
+#popular > .wrap > section > .swiper-wrapper .swiper-slide:hover {
+  transform: scale(1.2);
+}
+
+#popular > .wrap > section > .swiper-wrapper .swiper-slide.swiper-slide-active {
+  opacity: 1; /* 중앙에 보이는 슬라이드는 선명하게 */
+}
+
+#popular > .wrap > section .swiper-wrapper .swiper-slide p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #333;
+
+  opacity: 1;
+  position: relative;
+
+  top: 10px; /* 이미지와 텍스트 간의 간격 */
+
+  width: 100%;
+}
+#popular > .wrap > section .swiper-wrapper .swiper-slide > img {
+  display: block;
+  width: 100%;
+}
+
+#popular > .wrap > section .swiper-wrapper .swiper-slide .sub-txt {
   color: #555;
-  margin-top: 0;
+  /* margin-top: 0; */
   font-size: 16px;
   font-weight: 300;
 }
+
 #popular > .wrap > section > p {
   text-align: right;
   margin-top: 38px;
   font-size: 16px;
   font-weight: 700;
 }
-#popular > .wrap > section > p > a{
+
+#popular > .wrap > section > p > a {
   color: #0283df;
 }
 
+/* 활성화된 슬라이드만 진하게 만들기 */
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 1 !important;
+}
+
+.swiper-slide-active p,
+.swiper-slide-next p,
+.swiper-slide-prev p {
+  opacity: 1 !important;
+}
 
 /*나에게 맞는 추천 여행지*/
 #suit {
   min-width: 1280px;
   margin-top: 140px;
+  margin-left: auto; /* 가운데 정렬 */
+  margin-right: auto; /* 가운데 정렬 */
 }
 #suit > .wrap {
   width: 1280px;
   padding: 0 45px;
   margin: auto;
 }
-#suit > .wrap >  h2 {
+#suit > .wrap > h2 {
   font-size: 40px;
   color: #333;
   text-align: center;
@@ -570,14 +622,15 @@ color: #333;
   /* display: block;
   margin-bottom: 10px;   */
 }
-#suit > .wrap  .pic-container {
+#suit > .wrap .pic-container {
   display: flex;
+  justify-content: space-between; /* 고정된 배치 */
   flex-wrap: wrap;
-  gap:20px
+  gap: 20px;
 }
 
 /*액티브시 이벤트*/
-#suit > .wrap  li.active a{
+#suit > .wrap li.active a {
   color: #0283df;
   display: block;
   padding-bottom: 5px;
@@ -597,28 +650,31 @@ color: #333;
   position: absolute;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.6);
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
   transition: all 0.3s;
   cursor: pointer;
 }
-#suit > .wrap .pic > .txt > div{
+#suit > .wrap .pic > .txt > div {
   font-size: 20px;
   font-weight: 700;
-  color: #FFF;
+  color: #fff;
   position: absolute;
-  bottom: 20px; left: 20px;
+  bottom: 20px;
+  left: 20px;
 }
-#suit > .wrap .pic:hover .txt{
+#suit > .wrap .pic:hover .txt {
   opacity: 1;
   visibility: visible;
 }
 #suit > .wrap > .pic-container {
   display: none;
 }
-#suit > .wrap > .con1{
-  display:flex;
+#suit > .wrap > .con1 {
+  display: flex;
 }
 /* 숙소 프로모션 */
 #promotion {
@@ -643,7 +699,7 @@ color: #333;
 }
 #promotion > .wrap > section > .card-wrap {
   display: flex;
-  gap:20px;
+  gap: 20px;
   justify-content: center;
 }
 #promotion > .wrap > section > .card-wrap > .card {
@@ -651,7 +707,7 @@ color: #333;
   height: 400px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
   background-color: #fff;
 }
@@ -687,7 +743,7 @@ color: #333;
   top: 50%;
   transform: translateY(-50%);
 }
-#promotion > .wrap > section > .card-wrap > .btn > button{
+#promotion > .wrap > section > .card-wrap > .btn > button {
   width: 24px;
   height: 24px;
   border: 1px solid #ccc;
@@ -696,11 +752,11 @@ color: #333;
   cursor: pointer;
   position: absolute;
 }
-#promotion > .wrap > section > .card-wrap > .btn > button:nth-of-type(1){
-  left: 0; 
+#promotion > .wrap > section > .card-wrap > .btn > button:nth-of-type(1) {
+  left: 0;
 }
 #promotion > .wrap > section > .card-wrap > .btn > button:nth-of-type(2) {
-  right: 0; 
+  right: 0;
 }
 #promotion > .wrap > section > p > a {
   margin-top: 36px;
