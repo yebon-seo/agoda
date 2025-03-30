@@ -218,7 +218,7 @@ main > .container > #banner > .auto-slide {
   border-radius: 10px;
 }
 
-/* 추천호텔 */
+/* 인기 지역별 추천호텔 */
 #card-box {
   min-width: 1280px;
   height: 855px;
@@ -229,6 +229,7 @@ main > .container > #banner > .auto-slide {
   margin: auto;
   padding-top: 269px;
   overflow: hidden;
+  position: relative;
 }
 #card-box > .wrap > section {
   width: 940px;
@@ -251,7 +252,6 @@ main > .container > #banner > .auto-slide {
   display: flex;
   justify-content: center;
   gap: 20px;
-  position: relative;
   width: 1900px;
   height: 586px;
 }
@@ -312,12 +312,12 @@ main > .container > #banner > .auto-slide {
 
 /*좌우버튼*/
 #card-box > .wrap > section > .btn {
-  width: 60%;
+  width: 1190px;
   margin: auto;
   position: absolute;
-  top: 20%;
+  top: 100%;
   left: 50%;
-  transform: translate(50%, -60%);
+  transform: translate(-50%, -50%);
   /* left: -20px; */
 }
 #card-box > .wrap > section > .btn > button {
