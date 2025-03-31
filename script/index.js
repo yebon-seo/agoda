@@ -179,10 +179,10 @@
  });
 
  const swiper = new Swiper(".swiper", {
-   slidesPerView: "6", // 한 번에 4장 표시 (이미지와 텍스트가 한 번에 보이도록)
+   slidesPerView: "5", // 한 번에 4장 표시 (이미지와 텍스트가 한 번에 보이도록)
    loop: true, // 무한 루프
-   loopedSlides: 4,
-   spaceBetween: 10, // 이미지 간격 조정
+   loopedSlides: 2,
+   spaceBetween: 30, // 이미지 간격 조정
    centeredSlides: true, //중앙 정렬
    autoplay: {
      delay: 2000, // 자동 슬라이드 (3초 간격)

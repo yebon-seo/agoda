@@ -232,7 +232,7 @@ main > .container > #banner > .auto-slide {
   position: relative;
 }
 #card-box > .wrap > section {
-  width: 940px;
+  width: 960px;
   height: 586px;
   margin: auto;
   /* outline: 1px solid red; */
@@ -251,8 +251,7 @@ main > .container > #banner > .auto-slide {
 #card-box > .wrap > section > div {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  width: 1900px;
+  width: 1920px;
   height: 586px;
 }
 #card-box > .wrap > section > div > .card {
@@ -260,6 +259,7 @@ main > .container > #banner > .auto-slide {
   /* overflow: hidden; */
   border-radius: 20px;
   width: 300px;
+  margin:0 10px;
   height: 500px;
   box-shadow: 0 4px 4px rgba(51, 51, 51, 0.25);
 }
@@ -507,11 +507,6 @@ main > .container > #banner > .auto-slide {
 }
 
 #popular > .wrap > section > .swiper-wrapper {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-
   width: 100%;
 }
 
@@ -528,7 +523,7 @@ main > .container > #banner > .auto-slide {
 
 /* hover 시 이벤트 */
 #popular > .wrap > section > .swiper-wrapper .swiper-slide:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #popular > .wrap > section > .swiper-wrapper .swiper-slide.swiper-slide-active {
@@ -541,7 +536,7 @@ main > .container > #banner > .auto-slide {
   font-size: 20px;
   color: #333;
 
-  opacity: 1;
+
   position: relative;
 
   top: 10px; /* 이미지와 텍스트 간의 간격 */
@@ -571,19 +566,6 @@ main > .container > #banner > .auto-slide {
   color: #0283df;
 }
 
-/* 활성화된 슬라이드만 진하게 만들기 */
-
-.swiper-slide-active,
-.swiper-slide-next,
-.swiper-slide-prev {
-  opacity: 1 !important;
-}
-
-.swiper-slide-active p,
-.swiper-slide-next p,
-.swiper-slide-prev p {
-  opacity: 1 !important;
-}
 
 /*나에게 맞는 추천 여행지*/
 #suit {
