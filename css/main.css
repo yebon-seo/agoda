@@ -405,7 +405,7 @@ main > .container > #banner > .auto-slide {
   padding-bottom: 5px;
 }
 #recommend > .wrap > section > .card-wrap > .card > .txt > hr {
-  width: 440px;
+  /* width: 440px; */
   border: none;
   box-shadow: 0 0 0.5px 0.5px #999; /*얇게 하려공*/
   margin: 0 auto;
